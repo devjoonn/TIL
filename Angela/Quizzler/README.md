@@ -1,5 +1,6 @@
 # 실행화면
-/Users/parkhyeonjun/Desktop/Simulator Screen Recording - iPhone 11 - 2022-08-23 at 21.42.33.gif
+![Simulator Screen Recording - iPhone 11 - 2022-08-23 at 21 42 33](https://user-images.githubusercontent.com/82807263/186161628-35d20194-4847-4fa8-bbfc-6f7b6865304a.gif)
+
 
 
 #  Quizzler
