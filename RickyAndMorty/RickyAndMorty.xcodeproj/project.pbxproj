@@ -13,6 +13,7 @@
 		47FBEE632AD1760D00719074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FBEE622AD1760D00719074 /* Assets.xcassets */; };
 		47FBEE662AD1760D00719074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FBEE642AD1760D00719074 /* LaunchScreen.storyboard */; };
 		47FBEE712AD1760E00719074 /* RickyAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEE702AD1760E00719074 /* RickyAndMortyTests.swift */; };
+		47FBEEA92AD2A3BB00719074 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEEA82AD2A3BB00719074 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		47FBEE6C2AD1760E00719074 /* RickyAndMortyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickyAndMortyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47FBEE702AD1760E00719074 /* RickyAndMortyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyAndMortyTests.swift; sourceTree = "<group>"; };
 		47FBEE762AD1760E00719074 /* RickyAndMortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickyAndMortyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47FBEEA82AD2A3BB00719074 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 			children = (
 				47FBEEA32AD17C7000719074 /* CoordinatorScreens */,
 				47FBEEA22AD17C5A00719074 /* Utils */,
+				47FBEEA82AD2A3BB00719074 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47FBEEA92AD2A3BB00719074 /* Coordinator.swift in Sources */,
 				47FBEE5E2AD1760C00719074 /* HomeMenuController.swift in Sources */,
 				47FBEE5A2AD1760C00719074 /* AppDelegate.swift in Sources */,
 				47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */,
