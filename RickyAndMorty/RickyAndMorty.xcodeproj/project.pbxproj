@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47FB61412AD41F5300D4F5CF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB61402AD41F5300D4F5CF /* AppCoordinator.swift */; };
+		47FB61432AD41FBA00D4F5CF /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB61422AD41FBA00D4F5CF /* AppFactory.swift */; };
 		47FBEE5A2AD1760C00719074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEE592AD1760C00719074 /* AppDelegate.swift */; };
 		47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEE5B2AD1760C00719074 /* SceneDelegate.swift */; };
 		47FBEE5E2AD1760C00719074 /* HomeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEE5D2AD1760C00719074 /* HomeMenuController.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47FB61402AD41F5300D4F5CF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		47FB61422AD41FBA00D4F5CF /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		47FBEE562AD1760C00719074 /* RickyAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47FBEE592AD1760C00719074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47FBEE5B2AD1760C00719074 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -309,9 +313,10 @@
 		47FBEEA12AD17C4700719074 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				47FBEEA82AD2A3BB00719074 /* Coordinator.swift */,
 				47FBEEA32AD17C7000719074 /* CoordinatorScreens */,
 				47FBEEA22AD17C5A00719074 /* Utils */,
-				47FBEEA82AD2A3BB00719074 /* Coordinator.swift */,
+				47FB61402AD41F5300D4F5CF /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 		47FBEEA42AD17C9A00719074 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				47FB61422AD41FBA00D4F5CF /* AppFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -491,8 +497,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47FB61432AD41FBA00D4F5CF /* AppFactory.swift in Sources */,
 				47FBEEA92AD2A3BB00719074 /* Coordinator.swift in Sources */,
 				47FBEE5E2AD1760C00719074 /* HomeMenuController.swift in Sources */,
+				47FB61412AD41F5300D4F5CF /* AppCoordinator.swift in Sources */,
 				47FBEE5A2AD1760C00719074 /* AppDelegate.swift in Sources */,
 				47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */,
 			);
