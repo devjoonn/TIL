@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47F169242AD55D3200E1BD0B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */; };
+		47F169262AD55DDA00E1BD0B /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169252AD55DDA00E1BD0B /* HomeFactory.swift */; };
 		47FB61412AD41F5300D4F5CF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB61402AD41F5300D4F5CF /* AppCoordinator.swift */; };
 		47FB61432AD41FBA00D4F5CF /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB61422AD41FBA00D4F5CF /* AppFactory.swift */; };
 		47FBEE5A2AD1760C00719074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEE592AD1760C00719074 /* AppDelegate.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		47F169252AD55DDA00E1BD0B /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		47FB61402AD41F5300D4F5CF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		47FB61422AD41FBA00D4F5CF /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		47FBEE562AD1760C00719074 /* RickyAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,9 +318,9 @@
 			isa = PBXGroup;
 			children = (
 				47FBEEA82AD2A3BB00719074 /* Coordinator.swift */,
+				47FB61402AD41F5300D4F5CF /* AppCoordinator.swift */,
 				47FBEEA32AD17C7000719074 /* CoordinatorScreens */,
 				47FBEEA22AD17C5A00719074 /* Utils */,
-				47FB61402AD41F5300D4F5CF /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -331,6 +335,7 @@
 		47FBEEA32AD17C7000719074 /* CoordinatorScreens */ = {
 			isa = PBXGroup;
 			children = (
+				47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				47FB61422AD41FBA00D4F5CF /* AppFactory.swift */,
+				47F169252AD55DDA00E1BD0B /* HomeFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -502,6 +508,8 @@
 				47FBEE5E2AD1760C00719074 /* HomeMenuController.swift in Sources */,
 				47FB61412AD41F5300D4F5CF /* AppCoordinator.swift in Sources */,
 				47FBEE5A2AD1760C00719074 /* AppDelegate.swift in Sources */,
+				47F169262AD55DDA00E1BD0B /* HomeFactory.swift in Sources */,
+				47F169242AD55D3200E1BD0B /* HomeCoordinator.swift in Sources */,
 				47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
