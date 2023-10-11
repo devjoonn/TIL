@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		478D32922AD698EA00B50663 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D32912AD698E900B50663 /* Reusable.swift */; };
 		47F169242AD55D3200E1BD0B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */; };
 		47F169262AD55DDA00E1BD0B /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169252AD55DDA00E1BD0B /* HomeFactory.swift */; };
+		47F169282AD5662C00E1BD0B /* ItemHomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169272AD5662C00E1BD0B /* ItemHomeMenuCell.swift */; };
+		47F1692A2AD5676F00E1BD0B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169292AD5676F00E1BD0B /* UIView.swift */; };
 		47FB61412AD41F5300D4F5CF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB61402AD41F5300D4F5CF /* AppCoordinator.swift */; };
 		47FB61432AD41FBA00D4F5CF /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB61422AD41FBA00D4F5CF /* AppFactory.swift */; };
 		47FBEE5A2AD1760C00719074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEE592AD1760C00719074 /* AppDelegate.swift */; };
@@ -38,8 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		478D32912AD698E900B50663 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		47F169252AD55DDA00E1BD0B /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		47F169272AD5662C00E1BD0B /* ItemHomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuCell.swift; sourceTree = "<group>"; };
+		47F169292AD5676F00E1BD0B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		47FB61402AD41F5300D4F5CF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		47FB61422AD41FBA00D4F5CF /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		47FBEE562AD1760C00719074 /* RickyAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				47FBEE5D2AD1760C00719074 /* HomeMenuController.swift */,
+				47F169272AD5662C00E1BD0B /* ItemHomeMenuCell.swift */,
 			);
 			path = HomeMenu;
 			sourceTree = "<group>";
@@ -243,6 +250,7 @@
 		47FBEE972AD17B7B00719074 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				47F169292AD5676F00E1BD0B /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -296,6 +304,7 @@
 		47FBEE9E2AD17BF500719074 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				478D32912AD698E900B50663 /* Reusable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -503,6 +512,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47F1692A2AD5676F00E1BD0B /* UIView.swift in Sources */,
+				478D32922AD698EA00B50663 /* Reusable.swift in Sources */,
 				47FB61432AD41FBA00D4F5CF /* AppFactory.swift in Sources */,
 				47FBEEA92AD2A3BB00719074 /* Coordinator.swift in Sources */,
 				47FBEE5E2AD1760C00719074 /* HomeMenuController.swift in Sources */,
@@ -510,6 +521,7 @@
 				47FBEE5A2AD1760C00719074 /* AppDelegate.swift in Sources */,
 				47F169262AD55DDA00E1BD0B /* HomeFactory.swift in Sources */,
 				47F169242AD55D3200E1BD0B /* HomeCoordinator.swift in Sources */,
+				47F169282AD5662C00E1BD0B /* ItemHomeMenuCell.swift in Sources */,
 				47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
