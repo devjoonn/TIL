@@ -18,10 +18,10 @@ final class ItemHomeMenuCell: UICollectionViewCell {
         return view
     }()
     
-    private let characterImage: UIImageView = {
+    private let CategoryMenuImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "default")
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
@@ -48,8 +48,8 @@ final class ItemHomeMenuCell: UICollectionViewCell {
         addSubview(mainContainer)
         mainContainer.fillSuperView(widthPadding: 10)
         
-        mainContainer.addSubview(characterImage)
-        characterImage.fillSuperView()
+        mainContainer.addSubview(CategoryMenuImageView)
+        CategoryMenuImageView.fillSuperView()
         configGradientForTitle()
         
         mainContainer.addSubview(titleCategoryLabel)
@@ -69,6 +69,10 @@ final class ItemHomeMenuCell: UICollectionViewCell {
         mainContainer.layer.addSublayer(gradientMaskLayer)
     }
     
+    func configData(viewModel: ItemHomeMenuViewModel) {
+        titleCategoryLabel.text = viewModel.title
+        CategoryMenuImageView.image = UIImage(named: viewModel.imageName)
+    }
 }
 
 extension ItemHomeMenuCell: Reusable { }
