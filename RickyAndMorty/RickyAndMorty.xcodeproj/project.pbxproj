@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4746D7B22AD803FE002AC15F /* ApiClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D7B12AD803FE002AC15F /* ApiClientService.swift */; };
+		4746D7B52AD804AF002AC15F /* ApiClientServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D7B42AD804AF002AC15F /* ApiClientServiceImp.swift */; };
+		4746D7B82AD80582002AC15F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D7B72AD80582002AC15F /* ApiError.swift */; };
+		4746D7BB2AD8090E002AC15F /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D7BA2AD8090E002AC15F /* HttpResponseStatus.swift */; };
+		4746D80A2AD90D20002AC15F /* MenuDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D8092AD90D20002AC15F /* MenuDTO.swift */; };
+		4746D80C2AD90FA4002AC15F /* MenuDTO+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D80B2AD90FA4002AC15F /* MenuDTO+Mapper.swift */; };
+		4746D80E2AD91038002AC15F /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D80D2AD91038002AC15F /* PropertyIterator.swift */; };
+		4746D8102AD913DB002AC15F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D80F2AD913DB002AC15F /* Endpoint.swift */; };
 		478D32922AD698EA00B50663 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D32912AD698E900B50663 /* Reusable.swift */; };
 		478D32982AD6AD2100B50663 /* MenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D32972AD6AD2100B50663 /* MenuRepository.swift */; };
 		478D329B2AD6ADB500B50663 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D329A2AD6ADB500B50663 /* MenuItem.swift */; };
@@ -48,6 +56,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4746D7B12AD803FE002AC15F /* ApiClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientService.swift; sourceTree = "<group>"; };
+		4746D7B42AD804AF002AC15F /* ApiClientServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientServiceImp.swift; sourceTree = "<group>"; };
+		4746D7B72AD80582002AC15F /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		4746D7BA2AD8090E002AC15F /* HttpResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
+		4746D8092AD90D20002AC15F /* MenuDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDTO.swift; sourceTree = "<group>"; };
+		4746D80B2AD90FA4002AC15F /* MenuDTO+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuDTO+Mapper.swift"; sourceTree = "<group>"; };
+		4746D80D2AD91038002AC15F /* PropertyIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyIterator.swift; sourceTree = "<group>"; };
+		4746D80F2AD913DB002AC15F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		478D32912AD698E900B50663 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		478D32972AD6AD2100B50663 /* MenuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepository.swift; sourceTree = "<group>"; };
 		478D329A2AD6ADB500B50663 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
@@ -100,6 +116,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4746D7B02AD803D4002AC15F /* AppClient */ = {
+			isa = PBXGroup;
+			children = (
+				4746D7B12AD803FE002AC15F /* ApiClientService.swift */,
+			);
+			path = AppClient;
+			sourceTree = "<group>";
+		};
+		4746D7B32AD80488002AC15F /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				4746D7B42AD804AF002AC15F /* ApiClientServiceImp.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		4746D7B62AD80562002AC15F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				4746D7B72AD80582002AC15F /* ApiError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		4746D7B92AD808F3002AC15F /* StatusResponse */ = {
+			isa = PBXGroup;
+			children = (
+				4746D7BA2AD8090E002AC15F /* HttpResponseStatus.swift */,
+			);
+			name = StatusResponse;
+			sourceTree = "<group>";
+		};
+		4746D8082AD90D09002AC15F /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				4746D8092AD90D20002AC15F /* MenuDTO.swift */,
+				4746D80B2AD90FA4002AC15F /* MenuDTO+Mapper.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		478D32932AD6ACCD00B50663 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +169,7 @@
 		478D32942AD6ACDE00B50663 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4746D8082AD90D09002AC15F /* DTO */,
 				478D329C2AD6AE1900B50663 /* Repositories */,
 			);
 			path = Data;
@@ -268,6 +326,11 @@
 		47FBEE8D2AD17A9200719074 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4746D7B92AD808F3002AC15F /* StatusResponse */,
+				4746D7B62AD80562002AC15F /* Errors */,
+				4746D7B32AD80488002AC15F /* Implementations */,
+				4746D7B02AD803D4002AC15F /* AppClient */,
+				4746D80F2AD913DB002AC15F /* Endpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -398,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				478D32912AD698E900B50663 /* Reusable.swift */,
+				4746D80D2AD91038002AC15F /* PropertyIterator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -609,6 +673,7 @@
 				478D32922AD698EA00B50663 /* Reusable.swift in Sources */,
 				478D32A12AD6AF2400B50663 /* LoadMenuUseCase.swift in Sources */,
 				47FB61432AD41FBA00D4F5CF /* AppFactory.swift in Sources */,
+				4746D7B52AD804AF002AC15F /* ApiClientServiceImp.swift in Sources */,
 				47FBEEA92AD2A3BB00719074 /* Coordinator.swift in Sources */,
 				478D32982AD6AD2100B50663 /* MenuRepository.swift in Sources */,
 				47FBEE5E2AD1760C00719074 /* HomeMenuController.swift in Sources */,
@@ -618,11 +683,18 @@
 				47FBEE5A2AD1760C00719074 /* AppDelegate.swift in Sources */,
 				47F169262AD55DDA00E1BD0B /* HomeFactory.swift in Sources */,
 				47F169242AD55D3200E1BD0B /* HomeCoordinator.swift in Sources */,
+				4746D7B82AD80582002AC15F /* ApiError.swift in Sources */,
 				478D32A92AD6B28B00B50663 /* ItemHomeMenuViewModel.swift in Sources */,
+				4746D8102AD913DB002AC15F /* Endpoint.swift in Sources */,
+				4746D7BB2AD8090E002AC15F /* HttpResponseStatus.swift in Sources */,
+				4746D80E2AD91038002AC15F /* PropertyIterator.swift in Sources */,
 				478D32A52AD6B14B00B50663 /* HomeMenuViewModel.swift in Sources */,
 				478D329E2AD6AE5300B50663 /* MenuRepositoryImp.swift in Sources */,
+				4746D80C2AD90FA4002AC15F /* MenuDTO+Mapper.swift in Sources */,
 				47F169282AD5662C00E1BD0B /* ItemHomeMenuCell.swift in Sources */,
 				47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */,
+				4746D7B22AD803FE002AC15F /* ApiClientService.swift in Sources */,
+				4746D80A2AD90D20002AC15F /* MenuDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
