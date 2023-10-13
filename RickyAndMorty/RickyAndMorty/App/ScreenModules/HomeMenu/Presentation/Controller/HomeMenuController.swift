@@ -42,9 +42,8 @@ class HomeMenuController: UICollectionViewController {
                     self?.collectionView.reloadData()
                 case .loading:
                     self?.showSpinner()
-                    print("loading")
                 case .fail(error: let error):
-                    print("error", error)
+                    self?.presentAlert(message: error, title: "Error")
                 }
             }.store(in: &cancellable)
     }
@@ -74,3 +73,5 @@ extension HomeMenuController {
 }
 
 extension HomeMenuController: SpinnerDisplayable { }
+
+extension HomeMenuController: MessageDisplayable { }
