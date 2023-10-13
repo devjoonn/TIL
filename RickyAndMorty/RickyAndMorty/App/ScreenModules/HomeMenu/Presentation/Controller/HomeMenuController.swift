@@ -8,14 +8,20 @@
 import UIKit
 import Combine
 
+protocol HomeMenuControllerCoordinator: AnyObject {
+    func didSelectMenuCell(model: MenuItem)
+}
+
 class HomeMenuController: UICollectionViewController {
     // MARK: - Properties
     private let viewModel: HomeMenuViewModel
     private var cancellable = Set<AnyCancellable>()
+    private weak var coordinator: HomeMenuControllerCoordinator?
     
     // MARK: - Life Cycles
-    init(viewModel: HomeMenuViewModel, layout: UICollectionViewFlowLayout) {
+    init(viewModel: HomeMenuViewModel, layout: UICollectionViewFlowLayout, coordinator: HomeMenuControllerCoordinator) {
         self.viewModel = viewModel
+        self.coordinator = coordinator
         super.init(collectionViewLayout: layout)
     }
     
@@ -69,6 +75,13 @@ extension HomeMenuController {
         cell.configData(viewModel: viewModelCell)
         
         return cell
+    }
+}
+
+extension HomeMenuController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = viewModel.getMenuItem(indexPath: indexPath)
+        coordinator?.didSelectMenuCell(model: model)
     }
 }
 
