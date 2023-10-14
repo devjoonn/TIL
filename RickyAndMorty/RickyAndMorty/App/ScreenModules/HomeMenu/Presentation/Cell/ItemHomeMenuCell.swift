@@ -20,7 +20,7 @@ final class ItemHomeMenuCell: UICollectionViewCell {
     
     private let CategoryMenuImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "default")
+        imageView.image = UIImage(named: Images.defaultImage)
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -28,7 +28,6 @@ final class ItemHomeMenuCell: UICollectionViewCell {
     private let titleCategoryLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "Category"
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         return label
     }()

@@ -9,6 +9,7 @@ import Combine
 
 protocol HomeFactory {
     func makeModule(coordinator: HomeCoordinator) -> UIViewController
+    func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator
 }
 
 struct  HomeFactoryImp: HomeFactory {
@@ -21,14 +22,20 @@ struct  HomeFactoryImp: HomeFactory {
         let homeMenuController = HomeMenuController(viewModel: homeViewModel, 
                                                     layout: makeLayout(),
                                                     coordinator: coordinator)
-        homeMenuController.title = "Rick and Morty"
+        homeMenuController.title = AppLocalized.appName
         return homeMenuController
+    }
+    
+    func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator {
+        let characterFactory = CharactersFactoryImp()
+        let characterCoordinator = CharactersCoordinator(navigation: navigation, charactersFactory: characterFactory)
+        return characterCoordinator
     }
     
     private func makeLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        let layoutWidth = (UIScreen.main.bounds.width - 20) / 2
-        let layoutHeight = (UIScreen.main.bounds.width - 20) / 2
+        let layoutWidth = (ViewValues.widthScreen - 20) / 2
+        let layoutHeight = (ViewValues.widthScreen - 20) / 2
         layout.itemSize = CGSize(width: layoutWidth, height: layoutHeight)
         layout.minimumLineSpacing = .zero
         layout.minimumInteritemSpacing = .zero
