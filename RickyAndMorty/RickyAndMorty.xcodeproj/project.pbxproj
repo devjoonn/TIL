@@ -31,6 +31,7 @@
 		47980BB22ADA7714001946F8 /* CharactersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB12ADA7714001946F8 /* CharactersFactory.swift */; };
 		47980BB52ADA7780001946F8 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB42ADA7780001946F8 /* CharactersViewController.swift */; };
 		47980BB72ADA78A1001946F8 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB62ADA78A1001946F8 /* CharactersCoordinator.swift */; };
+		47980BBA2ADA860F001946F8 /* ItemCharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB92ADA860F001946F8 /* ItemCharacterTableViewCell.swift */; };
 		47F169242AD55D3200E1BD0B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */; };
 		47F169262AD55DDA00E1BD0B /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169252AD55DDA00E1BD0B /* HomeFactory.swift */; };
 		47F169282AD5662C00E1BD0B /* ItemHomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169272AD5662C00E1BD0B /* ItemHomeMenuCell.swift */; };
@@ -88,6 +89,7 @@
 		47980BB12ADA7714001946F8 /* CharactersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFactory.swift; sourceTree = "<group>"; };
 		47980BB42ADA7780001946F8 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		47980BB62ADA78A1001946F8 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
+		47980BB92ADA860F001946F8 /* ItemCharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCharacterTableViewCell.swift; sourceTree = "<group>"; };
 		47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		47F169252AD55DDA00E1BD0B /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		47F169272AD5662C00E1BD0B /* ItemHomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuCell.swift; sourceTree = "<group>"; };
@@ -263,9 +265,18 @@
 		47980BB32ADA7770001946F8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				47980BB82ADA85F4001946F8 /* Cell */,
 				47980BB42ADA7780001946F8 /* CharactersViewController.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		47980BB82ADA85F4001946F8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				47980BB92ADA860F001946F8 /* ItemCharacterTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		47FBEE4D2AD1760C00719074 = {
@@ -739,6 +750,7 @@
 				478D329E2AD6AE5300B50663 /* MenuRepositoryImp.swift in Sources */,
 				4746D80C2AD90FA4002AC15F /* MenuDTO+Mapper.swift in Sources */,
 				47F169282AD5662C00E1BD0B /* ItemHomeMenuCell.swift in Sources */,
+				47980BBA2ADA860F001946F8 /* ItemCharacterTableViewCell.swift in Sources */,
 				47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */,
 				4746D7B22AD803FE002AC15F /* ApiClientService.swift in Sources */,
 				4746D80A2AD90D20002AC15F /* MenuDTO.swift in Sources */,
