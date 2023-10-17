@@ -45,7 +45,6 @@ final class HomeMenuViewModelImp: HomeMenuViewModel {
     private func updateUI(result: Result<[MenuItem], Error>) {
         switch result {
         case .success(let menuItems):
-            print("menuItems = \(menuItems)")
             self.menuItems = menuItems
             state.send(.success)
         case .failure(let error):
