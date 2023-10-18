@@ -56,6 +56,7 @@ final class CharactersViewController: UITableViewController {
     private func configTableView() {
         tableView.separatorStyle = .none
         tableView.register(ItemCharacterTableViewCell.self, forCellReuseIdentifier: ItemCharacterTableViewCell.reuseIdentifier)
+        addSpinnerLastCell()
     }
 }
 
