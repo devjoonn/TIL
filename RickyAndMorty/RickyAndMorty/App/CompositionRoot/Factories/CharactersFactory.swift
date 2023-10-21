@@ -20,7 +20,9 @@ struct CharactersFactoryImp: CharactersFactory {
         let apiClient = ApiClientServiceImp()
         let characterRepository = CharacterRepositoryImp(apiClient: apiClient)
         let loadCharactersUseCase = LoadCharactersUseCaseImp(characterRepository: characterRepository, url: urlList)
+        let lastPageValidationUseCase = LastPageValidationUseCaseImp()
         let viewModel = CharactersViewModelImp(loadCharactersUseCase: loadCharactersUseCase,
+                                               lastPageValidationUseCase: lastPageValidationUseCase,
                                                state: state)
         let controller = CharactersViewController(viewModel: viewModel)
         controller.title = "Characters"
