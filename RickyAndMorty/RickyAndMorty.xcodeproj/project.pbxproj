@@ -53,6 +53,13 @@
 		47980BB52ADA7780001946F8 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB42ADA7780001946F8 /* CharactersViewController.swift */; };
 		47980BB72ADA78A1001946F8 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB62ADA78A1001946F8 /* CharactersCoordinator.swift */; };
 		47980BBA2ADA860F001946F8 /* ItemCharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB92ADA860F001946F8 /* ItemCharacterTableViewCell.swift */; };
+		47D7B1472AE4EF3C00C40805 /* RemoteImageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B1462AE4EF3C00C40805 /* RemoteImageDataService.swift */; };
+		47D7B1492AE4EFC000C40805 /* ApiClientServiceImp+RemoteImageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B1482AE4EFC000C40805 /* ApiClientServiceImp+RemoteImageDataService.swift */; };
+		47D7B14B2AE4F0B000C40805 /* LocalDataImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B14A2AE4F0B000C40805 /* LocalDataImageService.swift */; };
+		47D7B14E2AE4F20F00C40805 /* ImageDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B14D2AE4F20F00C40805 /* ImageDataRepository.swift */; };
+		47D7B1512AE4F2C900C40805 /* ImageDataRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B1502AE4F2C900C40805 /* ImageDataRepositoryImp.swift */; };
+		47D7B1542AE4F42F00C40805 /* ImageDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B1532AE4F42F00C40805 /* ImageDataUseCase.swift */; };
+		47D7B1562AE4F5A300C40805 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B1552AE4F5A300C40805 /* AppContainer.swift */; };
 		47F169242AD55D3200E1BD0B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */; };
 		47F169262AD55DDA00E1BD0B /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169252AD55DDA00E1BD0B /* HomeFactory.swift */; };
 		47F169282AD5662C00E1BD0B /* ItemHomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169272AD5662C00E1BD0B /* ItemHomeMenuCell.swift */; };
@@ -132,6 +139,13 @@
 		47980BB42ADA7780001946F8 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		47980BB62ADA78A1001946F8 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
 		47980BB92ADA860F001946F8 /* ItemCharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCharacterTableViewCell.swift; sourceTree = "<group>"; };
+		47D7B1462AE4EF3C00C40805 /* RemoteImageDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataService.swift; sourceTree = "<group>"; };
+		47D7B1482AE4EFC000C40805 /* ApiClientServiceImp+RemoteImageDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiClientServiceImp+RemoteImageDataService.swift"; sourceTree = "<group>"; };
+		47D7B14A2AE4F0B000C40805 /* LocalDataImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataImageService.swift; sourceTree = "<group>"; };
+		47D7B14D2AE4F20F00C40805 /* ImageDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataRepository.swift; sourceTree = "<group>"; };
+		47D7B1502AE4F2C900C40805 /* ImageDataRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataRepositoryImp.swift; sourceTree = "<group>"; };
+		47D7B1532AE4F42F00C40805 /* ImageDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataUseCase.swift; sourceTree = "<group>"; };
+		47D7B1552AE4F5A300C40805 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		47F169252AD55DDA00E1BD0B /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		47F169272AD5662C00E1BD0B /* ItemHomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuCell.swift; sourceTree = "<group>"; };
@@ -282,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				4746D7B12AD803FE002AC15F /* ApiClientService.swift */,
+				47D7B1462AE4EF3C00C40805 /* RemoteImageDataService.swift */,
 			);
 			path = AppClient;
 			sourceTree = "<group>";
@@ -290,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				4746D7B42AD804AF002AC15F /* ApiClientServiceImp.swift */,
+				47D7B1482AE4EFC000C40805 /* ApiClientServiceImp+RemoteImageDataService.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -423,6 +439,30 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		47D7B14C2AE4F1EC00C40805 /* InterfacesRepository */ = {
+			isa = PBXGroup;
+			children = (
+				47D7B14D2AE4F20F00C40805 /* ImageDataRepository.swift */,
+			);
+			path = InterfacesRepository;
+			sourceTree = "<group>";
+		};
+		47D7B14F2AE4F29500C40805 /* RepositoriesImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				47D7B1502AE4F2C900C40805 /* ImageDataRepositoryImp.swift */,
+			);
+			path = RepositoriesImplementation;
+			sourceTree = "<group>";
+		};
+		47D7B1522AE4F41700C40805 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				47D7B1532AE4F42F00C40805 /* ImageDataUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		47FBEE4D2AD1760C00719074 = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +576,7 @@
 		47FBEE8F2AD17AAD00719074 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				47D7B14A2AE4F0B000C40805 /* LocalDataImageService.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -633,6 +674,7 @@
 		47FBEE9B2AD17BC100719074 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				47D7B14F2AE4F29500C40805 /* RepositoriesImplementation */,
 				472398D62ADD4E5E004C4D47 /* DTO */,
 			);
 			path = Data;
@@ -641,6 +683,8 @@
 		47FBEE9C2AD17BC900719074 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				47D7B1522AE4F41700C40805 /* UseCases */,
+				47D7B14C2AE4F1EC00C40805 /* InterfacesRepository */,
 				472398C32ADD3CCD004C4D47 /* Entities */,
 			);
 			path = Domain;
@@ -720,6 +764,7 @@
 		47FBEEA52AD17CA800719074 /* DIContainer */ = {
 			isa = PBXGroup;
 			children = (
+				47D7B1552AE4F5A300C40805 /* AppContainer.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -873,20 +918,25 @@
 			files = (
 				472398D52ADD4228004C4D47 /* CharactersDTO.swift in Sources */,
 				472398DC2ADD4ED2004C4D47 /* InfoDTO.swift in Sources */,
+				47D7B1492AE4EFC000C40805 /* ApiClientServiceImp+RemoteImageDataService.swift in Sources */,
 				47980BB52ADA7780001946F8 /* CharactersViewController.swift in Sources */,
 				47F1692A2AD5676F00E1BD0B /* UIView.swift in Sources */,
+				47D7B14E2AE4F20F00C40805 /* ImageDataRepository.swift in Sources */,
 				478D32922AD698EA00B50663 /* Reusable.swift in Sources */,
 				472398F42ADD585A004C4D47 /* BaseViewModel.swift in Sources */,
 				472398F12ADD571B004C4D47 /* ItemCharacterViewModel.swift in Sources */,
 				478D32A12AD6AF2400B50663 /* LoadMenuUseCase.swift in Sources */,
 				47FB61432AD41FBA00D4F5CF /* AppFactory.swift in Sources */,
+				47D7B1542AE4F42F00C40805 /* ImageDataUseCase.swift in Sources */,
 				4746D7B52AD804AF002AC15F /* ApiClientServiceImp.swift in Sources */,
 				472398EF2ADD569B004C4D47 /* CharactersViewModel.swift in Sources */,
 				472398C72ADD3D2B004C4D47 /* StatusCharacter.swift in Sources */,
+				47D7B1472AE4EF3C00C40805 /* RemoteImageDataService.swift in Sources */,
 				47980BB72ADA78A1001946F8 /* CharactersCoordinator.swift in Sources */,
 				47FBEEA92AD2A3BB00719074 /* Coordinator.swift in Sources */,
 				478D32982AD6AD2100B50663 /* MenuRepository.swift in Sources */,
 				47FBEE5E2AD1760C00719074 /* HomeMenuController.swift in Sources */,
+				47D7B1562AE4F5A300C40805 /* AppContainer.swift in Sources */,
 				478D32A72AD6B1DD00B50663 /* StateController.swift in Sources */,
 				472398C92ADD3DEC004C4D47 /* String+empty.swift in Sources */,
 				4746D8132AD91EFD002AC15F /* SpinnerDisplayable.swift in Sources */,
@@ -916,7 +966,9 @@
 				478D329E2AD6AE5300B50663 /* MenuRepositoryImp.swift in Sources */,
 				472398E52ADD50AA004C4D47 /* CharacterRepositoryImp.swift in Sources */,
 				4746D80C2AD90FA4002AC15F /* MenuDTO+Mapper.swift in Sources */,
+				47D7B1512AE4F2C900C40805 /* ImageDataRepositoryImp.swift in Sources */,
 				472398E72ADD516C004C4D47 /* ResultsCharactersDTO+Mapping.swift in Sources */,
+				47D7B14B2AE4F0B000C40805 /* LocalDataImageService.swift in Sources */,
 				47F169282AD5662C00E1BD0B /* ItemHomeMenuCell.swift in Sources */,
 				47826F192AE0D60C0067FC6D /* LastPageValidationUseCase.swift in Sources */,
 				47980BBA2ADA860F001946F8 /* ItemCharacterTableViewCell.swift in Sources */,

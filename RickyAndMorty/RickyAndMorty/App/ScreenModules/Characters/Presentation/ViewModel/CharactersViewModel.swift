@@ -28,10 +28,15 @@ final class CharactersViewModelImp: CharactersViewModel {
     private var characters: [Character] = []
     private let loadCharactersUseCase: LoadCharactersUseCase
     private var lastPageValidationUseCase: LastPageValidationUseCase
+    private var imageDaraUseCase: ImageDataUseCase
     
-    init(loadCharactersUseCase: LoadCharactersUseCase, lastPageValidationUseCase: LastPageValidationUseCase, state: PassthroughSubject<StateController, Never>) {
+    init(loadCharactersUseCase: LoadCharactersUseCase, 
+         lastPageValidationUseCase: LastPageValidationUseCase,
+         state: PassthroughSubject<StateController, Never>,
+         imageDataUseCase: ImageDataUseCase) {
         self.loadCharactersUseCase = loadCharactersUseCase
         self.lastPageValidationUseCase = lastPageValidationUseCase
+        self.imageDaraUseCase = imageDataUseCase
         self.state = state
     }
     
