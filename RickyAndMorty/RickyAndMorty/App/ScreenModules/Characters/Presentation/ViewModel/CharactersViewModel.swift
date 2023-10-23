@@ -28,7 +28,7 @@ final class CharactersViewModelImp: CharactersViewModel {
     private var characters: [Character] = []
     private let loadCharactersUseCase: LoadCharactersUseCase
     private var lastPageValidationUseCase: LastPageValidationUseCase
-    private var imageDaraUseCase: ImageDataUseCase
+    private var imageDataUseCase: ImageDataUseCase
     
     init(loadCharactersUseCase: LoadCharactersUseCase, 
          lastPageValidationUseCase: LastPageValidationUseCase,
@@ -36,7 +36,7 @@ final class CharactersViewModelImp: CharactersViewModel {
          imageDataUseCase: ImageDataUseCase) {
         self.loadCharactersUseCase = loadCharactersUseCase
         self.lastPageValidationUseCase = lastPageValidationUseCase
-        self.imageDaraUseCase = imageDataUseCase
+        self.imageDataUseCase = imageDataUseCase
         self.state = state
     }
     
@@ -79,7 +79,8 @@ final class CharactersViewModelImp: CharactersViewModel {
     
     private func makeItemCharacterViewModel(row: Int) -> ItemCharacterViewModel {
         let character = characters[row]
-        return ItemCharacterViewModel(character: character)
+        return ItemCharacterViewModel(character: character,
+                                      dataImageUseCase: imageDataUseCase)
     }
     
     func getUrlList(row: Int) -> String {

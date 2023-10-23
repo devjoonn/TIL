@@ -20,7 +20,7 @@ extension ResultsCharactersDTO {
                                       status: statusCharacter,
                                       specie: specie,
                                       urlCharacter: $0.url,
-                                      urlImage: $0.url,
+                                      urlImage: $0.image,
                                       origin: origin,
                                       location: location )
         }

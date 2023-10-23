@@ -22,7 +22,6 @@ final class ItemCharacterTableViewCell: UITableViewCell {
     private var characterImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.setWidthConstraint(with: 100)
-        imageView.image = UIImage(named: "default")
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -62,8 +61,15 @@ final class ItemCharacterTableViewCell: UITableViewCell {
         configUI()
     }
     
+    private var task: Task<Void, Never>?
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        task?.cancel()
     }
     
     // MARK: - Helpers
@@ -94,6 +100,23 @@ final class ItemCharacterTableViewCell: UITableViewCell {
         nameLabel.text = viewModel.name
         specieLabel.text = viewModel.specie
         statusLabel.text = viewModel.status
+        setImage(viewModel: viewModel)
+    }
+    
+    private func setImage(viewModel: ItemCharacterViewModel) {
+        // 이미지 초기 설정
+        characterImageView.addDefaultImage()
+        // 캐시 데이터가 있을 시 이미지 설정
+        
+        if let data = viewModel.imageData {
+            characterImageView.setImageFromData(data: data)
+        } else {
+            // 없다면 다시 api 요청
+            task = Task {
+                let dataImage = await viewModel.getImageData()
+                characterImageView.setImageFromData(data: dataImage)
+            }
+        }
     }
 }
 
