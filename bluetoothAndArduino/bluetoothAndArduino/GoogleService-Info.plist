@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCc8TAIrnMkgt8yxj7pxSUzx_xfwZEh3M4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>608372576687</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Devjoonn.bluetoothAndArduino.bluetoothAndArduino</string>
+	<key>PROJECT_ID</key>
+	<string>ecg-feature-ios</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ecg-feature-ios.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:608372576687:ios:fcf6e47770778ede429f5a</string>
+</dict>
+</plist>

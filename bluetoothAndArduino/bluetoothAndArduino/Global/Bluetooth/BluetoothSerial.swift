@@ -142,9 +142,7 @@ class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate 
         // 전송받은 데이터가 존재하는지 확인합니다.
         let data = characteristic.value
         guard data != nil else { return }
-        
-        print("데이터 오는 중 - \(data)")
-        
+
         // 데이터를 String으로 변환하고, 변환된 값을 파라미터로 한 delegate함수를 호출합니다.
         if let str = String(data: data!, encoding: String.Encoding.utf8) {
             let receivedDataArray = str.components(separatedBy: ",")

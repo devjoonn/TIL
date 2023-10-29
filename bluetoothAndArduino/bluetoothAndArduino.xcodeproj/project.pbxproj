@@ -19,6 +19,12 @@
 		4746D8022AD820FA002AC15F /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D8012AD820FA002AC15F /* BluetoothSerial.swift */; };
 		4746D8052AD82335002AC15F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4746D8042AD82335002AC15F /* SnapKit */; };
 		4746D8072AD82870002AC15F /* ScanBluetoothCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D8062AD82870002AC15F /* ScanBluetoothCell.swift */; };
+		475DF2912AED419B00A1766E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 475DF2902AED419B00A1766E /* GoogleService-Info.plist */; };
+		475DF2962AED44EE00A1766E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 475DF2952AED44EE00A1766E /* FirebaseAnalytics */; };
+		475DF2982AED44EE00A1766E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 475DF2972AED44EE00A1766E /* FirebaseAuth */; };
+		475DF29A2AED44EE00A1766E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 475DF2992AED44EE00A1766E /* FirebaseDatabase */; };
+		475DF29C2AED44EE00A1766E /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 475DF29B2AED44EE00A1766E /* FirebaseDatabaseSwift */; };
+		475DF2A02AED458100A1766E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475DF29F2AED458100A1766E /* NetworkService.swift */; };
 		47D7B1452AE14C3800C40805 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 47D7B1442AE14C3800C40805 /* DGCharts */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +61,8 @@
 		4746D7FE2AD81A38002AC15F /* FindingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindingDeviceViewController.swift; sourceTree = "<group>"; };
 		4746D8012AD820FA002AC15F /* BluetoothSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 		4746D8062AD82870002AC15F /* ScanBluetoothCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBluetoothCell.swift; sourceTree = "<group>"; };
+		475DF2902AED419B00A1766E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		475DF29F2AED458100A1766E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +70,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475DF29C2AED44EE00A1766E /* FirebaseDatabaseSwift in Frameworks */,
+				475DF29A2AED44EE00A1766E /* FirebaseDatabase in Frameworks */,
 				47D7B1452AE14C3800C40805 /* DGCharts in Frameworks */,
 				4746D8052AD82335002AC15F /* SnapKit in Frameworks */,
+				475DF2962AED44EE00A1766E /* FirebaseAnalytics in Frameworks */,
+				475DF2982AED44EE00A1766E /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +122,7 @@
 				4746D7FA2AD819F0002AC15F /* Global */,
 				4746D7F92AD819BA002AC15F /* Domain */,
 				4746D7F82AD8199F002AC15F /* Sources */,
+				475DF2902AED419B00A1766E /* GoogleService-Info.plist */,
 				4746D7D62AD81599002AC15F /* Info.plist */,
 			);
 			path = bluetoothAndArduino;
@@ -143,6 +156,8 @@
 		4746D7F92AD819BA002AC15F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				475DF29E2AED455200A1766E /* Network */,
+				475DF29D2AED454600A1766E /* Presentation */,
 				4746D7FD2AD81A20002AC15F /* LaunchScreen */,
 				4746D7FC2AD81A0F002AC15F /* FindingDevice */,
 				4746D7FB2AD81A09002AC15F /* Home */,
@@ -193,6 +208,21 @@
 			path = Bluetooth;
 			sourceTree = "<group>";
 		};
+		475DF29D2AED454600A1766E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		475DF29E2AED455200A1766E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				475DF29F2AED458100A1766E /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,6 +242,10 @@
 			packageProductDependencies = (
 				4746D8042AD82335002AC15F /* SnapKit */,
 				47D7B1442AE14C3800C40805 /* DGCharts */,
+				475DF2952AED44EE00A1766E /* FirebaseAnalytics */,
+				475DF2972AED44EE00A1766E /* FirebaseAuth */,
+				475DF2992AED44EE00A1766E /* FirebaseDatabase */,
+				475DF29B2AED44EE00A1766E /* FirebaseDatabaseSwift */,
 			);
 			productName = bluetoothAndArduino;
 			productReference = 4746D7C52AD81597002AC15F /* bluetoothAndArduino.app */;
@@ -288,6 +322,7 @@
 			packageReferences = (
 				4746D8032AD82335002AC15F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				47D7B1432AE14BAE00C40805 /* XCRemoteSwiftPackageReference "Charts" */,
+				475DF2922AED420D00A1766E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 4746D7C62AD81597002AC15F /* Products */;
 			projectDirPath = "";
@@ -307,6 +342,7 @@
 			files = (
 				4746D7D52AD81599002AC15F /* LaunchScreen.storyboard in Resources */,
 				4746D7D22AD81599002AC15F /* Assets.xcassets in Resources */,
+				475DF2912AED419B00A1766E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +373,7 @@
 				4746D8072AD82870002AC15F /* ScanBluetoothCell.swift in Sources */,
 				4746D7CB2AD81597002AC15F /* SceneDelegate.swift in Sources */,
 				4746D8022AD820FA002AC15F /* BluetoothSerial.swift in Sources */,
+				475DF2A02AED458100A1766E /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +722,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		475DF2922AED420D00A1766E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
 		47D7B1432AE14BAE00C40805 /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts.git";
@@ -700,6 +745,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4746D8032AD82335002AC15F /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		475DF2952AED44EE00A1766E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 475DF2922AED420D00A1766E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		475DF2972AED44EE00A1766E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 475DF2922AED420D00A1766E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		475DF2992AED44EE00A1766E /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 475DF2922AED420D00A1766E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		475DF29B2AED44EE00A1766E /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 475DF2922AED420D00A1766E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
 		};
 		47D7B1442AE14C3800C40805 /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;

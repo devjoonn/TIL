@@ -14,7 +14,6 @@ class HomeViewController: UIViewController {
     
     var chartView = LineChartView()
     
-    
     var serialMessageLabel: UILabel = {
         $0.text = "연결되지 않음"
         $0.textColor = .black
@@ -32,6 +31,10 @@ class HomeViewController: UIViewController {
     }(UIButton())
     
     var dataEntries = [ChartDataEntry]()
+    var buttonCheck: Bool = false
+    var counterCheck: Bool = false
+    var beat: String = ""
+    var breath: String = ""
     
     // MARK: - Life Cycles
     override func viewDidLoad() {
@@ -83,9 +86,7 @@ class HomeViewController: UIViewController {
         chartView.setVisibleXRangeMaximum(1000)
         let xAxis = chartView.xAxis
         xAxis.labelPosition = .bottom
-        
         let leftAxis = chartView.leftAxis
-        leftAxis.axisMinimum = 0
     }
     
     private func configNavBar() {
@@ -107,8 +108,10 @@ class HomeViewController: UIViewController {
             print("시리얼이 준비되지 않음")
             return
         }
-        print("Delegate 확인 = \(serial.delegate)")
-        serialMessageLabel.text = "waiting for Peripheral's messege"
+        // 타이머 종료하면서 데이터 수신 x
+        if !counterCheck {
+            startCounting(beat: beat, breath: breath)
+        }
     }
     
     @objc func updateChartData(data: String) {
@@ -137,19 +140,37 @@ class HomeViewController: UIViewController {
         chartView.data = chartData
         chartView.notifyDataSetChanged()
     }
+    
+    func startCounting(beat: String, breath: String) {
+        counterCheck = true
+        startButton.backgroundColor = .systemGray2
+        startButton.isEnabled = false
+        var count = 0
+        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            count += 1
+            NetworkService.networkService.save(beat: beat, breath: breath)
+            
+            if count > 60 {
+                timer.invalidate()
+                self.counterCheck = false
+                self.startButton.backgroundColor = .black
+                self.startButton.isEnabled = true
+            }
+        }
+        timer.fire()
+    }
 }
 
 extension HomeViewController: BluetoothSerialDelegate {
     func serialDidReceiveMessage(valueA: String, valueB: String, valueC: String) {
-        print("home에서 delegate로 받은 valueA = \(valueA), valueB = \(valueB), valueC = \(valueC)")
-        
-        if Int(valueB) ?? 0 >= 150 || Int(valueB) ?? 0 <= 30 {
-//            showAlertViewController()
+        if Int(valueB) ?? 0 >= 150 || Int(valueB) ?? 0 <= 30 && Int(valueB) != 0 {
+            showAlertViewController()
         }
         let attributedString = NSMutableAttributedString(string: "심박수 : \(valueB)       호흡수: \(valueC)", attributes: [.font: UIFont.boldSystemFont(ofSize: 16), .foregroundColor: UIColor.black])
-        
         serialMessageLabel.attributedText = attributedString
         self.updateChartData(data: valueA)
+        self.beat = valueB
+        self.breath = valueC
     }
     
     private func showAlertViewController() {
