@@ -158,9 +158,6 @@
 			children = (
 				475DF29E2AED455200A1766E /* Network */,
 				475DF29D2AED454600A1766E /* Presentation */,
-				4746D7FD2AD81A20002AC15F /* LaunchScreen */,
-				4746D7FC2AD81A0F002AC15F /* FindingDevice */,
-				4746D7FB2AD81A09002AC15F /* Home */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -211,6 +208,9 @@
 		475DF29D2AED454600A1766E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				4746D7FD2AD81A20002AC15F /* LaunchScreen */,
+				4746D7FB2AD81A09002AC15F /* Home */,
+				4746D7FC2AD81A0F002AC15F /* FindingDevice */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
