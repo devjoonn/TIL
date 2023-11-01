@@ -10,7 +10,7 @@ import Combine
 
 protocol CharactersFactory {
     func makeModule(coordinator: CharactersViewControllerCoordinator) -> UIViewController
-    
+    func makeCharacterDetailCoordinator(navigation: UINavigationController, urlList: String) -> Coordinator
 }
 
 struct CharactersFactoryImp: CharactersFactory {
@@ -27,8 +27,17 @@ struct CharactersFactoryImp: CharactersFactory {
                                                lastPageValidationUseCase: lastPageValidationUseCase,
                                                state: state,
                                                imageDataUseCase: appContainer.getDataImageUseCase())
-        let controller = CharactersViewController(viewModel: viewModel)
+        let controller = CharactersViewController(
+            viewModel: viewModel,
+            coordinator: coordinator)
         controller.title = "Characters"
         return controller
+    }
+    
+    func makeCharacterDetailCoordinator(navigation: UINavigationController, urlList: String) -> Coordinator {
+        let characterDetailFactory = CharacterDetailFactoryImp(urlDetail: urlList, appContainer: appContainer)
+        let characterDetailCoordinator = CharacterDetailCoordinator(navigation: navigation,
+                                                                    characterDetailFactory: characterDetailFactory)
+        return characterDetailCoordinator
     }
 }

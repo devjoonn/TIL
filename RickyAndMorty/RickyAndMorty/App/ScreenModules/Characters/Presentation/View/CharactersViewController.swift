@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 protocol CharactersViewControllerCoordinator {
-    func didSelectMenuCell(urlDetail: String)
+    func didSelectCell(urlDetail: String)
 }
 
 final class CharactersViewController: UITableViewController {
@@ -17,10 +17,12 @@ final class CharactersViewController: UITableViewController {
     // MARK: - Properties
     private let viewModel: CharactersViewModel
     private var cancellable = Set<AnyCancellable>()
+    private var coordinator: CharactersViewControllerCoordinator
     
     // MARK: - Life Cycles
-    init(viewModel: CharactersViewModel) {
+    init(viewModel: CharactersViewModel, coordinator: CharactersViewControllerCoordinator) {
         self.viewModel = viewModel
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -78,6 +80,14 @@ extension CharactersViewController {
         if !viewModel.lastPage {
             tableView.tableFooterView?.isHidden = viewModel.lastPage
         }
+    }
+}
+
+// MARK: - Delegate
+extension CharactersViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let urlDetail = viewModel.getUrlDetail(row: indexPath.row)
+        coordinator.didSelectCell(urlDetail: urlDetail)
     }
 }
 
