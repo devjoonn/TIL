@@ -17,7 +17,18 @@ struct CharacterDetailFactoryImp: CharacterDetailFactory {
     let appContainer: AppContainer
     
     func makeModule(coordinator: CharacterDetailViewControllerCoordinator) -> UIViewController {
-        let controller = CharacterDetailViewController()
+        let state = PassthroughSubject<StateController, Never>()
+        
+        let characterDetailRepository = CharacterDetailRepositoryImp(remoteService: appContainer.apiClient)
+        let loadCharacterDetailUseCase = LoadCharacterDetailUseCaseImp(characterDetailRepository: characterDetailRepository,
+                                                                       urlDetail: urlDetail)
+        let viewModel = CharacterDetailViewModelImp(state: state, 
+                                                    loadCharacterDetailUseCase: loadCharacterDetailUseCase,
+                                                    dataImageUseCase: appContainer.getDataImageUseCase())
+        
+        let controller = CharacterDetailViewController(
+            viewModel: viewModel,
+            coordinator: coordinator)
         return controller
     }
 }

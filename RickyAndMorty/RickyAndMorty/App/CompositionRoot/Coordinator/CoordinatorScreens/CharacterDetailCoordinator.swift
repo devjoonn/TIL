@@ -23,5 +23,11 @@ final class CharacterDetailCoordinator: Coordinator {
 }
 
 extension CharacterDetailCoordinator: CharacterDetailViewControllerCoordinator {
-
+    func didTapOriginButton() {
+        print("origin")
+    }
+    
+    func didTapLocationButton() {
+        print("location")
+    }
 }

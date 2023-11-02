@@ -22,7 +22,7 @@ struct ImageDataRepositoryImp: ImageDataRepository {
         return data
     }
     
-    func getFromCache(url: URL?) -> Data? {
-        localDataCache.get(key: url?.absoluteString ?? .empty)
+    func getFromCache(url: String?) -> Data? {
+        localDataCache.get(key: url ?? .empty)
     }
 }

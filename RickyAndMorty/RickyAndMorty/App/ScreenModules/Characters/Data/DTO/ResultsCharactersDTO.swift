@@ -6,6 +6,6 @@
 //
 
 struct ResultsCharactersDTO: Decodable {
-    let results: [CharactersDTO]
+    let results: [CharacterDTO]
     let info: InfoDTO
 }
