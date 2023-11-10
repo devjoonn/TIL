@@ -62,6 +62,8 @@
 		4797CA322AFE0210001D80E9 /* OriginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4797CA312AFE0210001D80E9 /* OriginFactory.swift */; };
 		4797CA342AFE0618001D80E9 /* LocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4797CA332AFE0618001D80E9 /* LocationFactory.swift */; };
 		4797CA362AFE0661001D80E9 /* LocationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4797CA352AFE0661001D80E9 /* LocationCoordinator.swift */; };
+		4797CA3A2AFE0B6D001D80E9 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4797CA392AFE0B6D001D80E9 /* LocationDetailViewController.swift */; };
+		4797CA3D2AFE0BF6001D80E9 /* OriginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4797CA3C2AFE0BF6001D80E9 /* OriginViewController.swift */; };
 		47980BB22ADA7714001946F8 /* CharactersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB12ADA7714001946F8 /* CharactersFactory.swift */; };
 		47980BB52ADA7780001946F8 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB42ADA7780001946F8 /* CharactersViewController.swift */; };
 		47980BB72ADA78A1001946F8 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB62ADA78A1001946F8 /* CharactersCoordinator.swift */; };
@@ -161,6 +163,8 @@
 		4797CA312AFE0210001D80E9 /* OriginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginFactory.swift; sourceTree = "<group>"; };
 		4797CA332AFE0618001D80E9 /* LocationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFactory.swift; sourceTree = "<group>"; };
 		4797CA352AFE0661001D80E9 /* LocationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinator.swift; sourceTree = "<group>"; };
+		4797CA392AFE0B6D001D80E9 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
+		4797CA3C2AFE0BF6001D80E9 /* OriginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginViewController.swift; sourceTree = "<group>"; };
 		47980BB12ADA7714001946F8 /* CharactersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFactory.swift; sourceTree = "<group>"; };
 		47980BB42ADA7780001946F8 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		47980BB62ADA78A1001946F8 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
@@ -532,6 +536,22 @@
 			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
+		4797CA382AFE0B59001D80E9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4797CA392AFE0B6D001D80E9 /* LocationDetailViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4797CA3B2AFE0BE2001D80E9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4797CA3C2AFE0BF6001D80E9 /* OriginViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		47980BB32ADA7770001946F8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -738,6 +758,7 @@
 		47FBEE952AD17B5300719074 /* Origin */ = {
 			isa = PBXGroup;
 			children = (
+				4797CA3B2AFE0BE2001D80E9 /* Presentation */,
 			);
 			path = Origin;
 			sourceTree = "<group>";
@@ -745,6 +766,7 @@
 		47FBEE962AD17B6700719074 /* LocationDetail */ = {
 			isa = PBXGroup;
 			children = (
+				4797CA382AFE0B59001D80E9 /* Presentation */,
 			);
 			path = LocationDetail;
 			sourceTree = "<group>";
@@ -1093,6 +1115,7 @@
 				478D329E2AD6AE5300B50663 /* MenuRepositoryImp.swift in Sources */,
 				472398E52ADD50AA004C4D47 /* CharacterRepositoryImp.swift in Sources */,
 				4746D80C2AD90FA4002AC15F /* MenuDTO+Mapper.swift in Sources */,
+				4797CA3A2AFE0B6D001D80E9 /* LocationDetailViewController.swift in Sources */,
 				47D7B1512AE4F2C900C40805 /* ImageDataRepositoryImp.swift in Sources */,
 				472398E72ADD516C004C4D47 /* ResultsCharactersDTO+Mapping.swift in Sources */,
 				475DF2B62AF24D9100A1766E /* CharacterDTO+Mapping.swift in Sources */,
@@ -1102,6 +1125,7 @@
 				47980BBA2ADA860F001946F8 /* ItemCharacterTableViewCell.swift in Sources */,
 				47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */,
 				475DF2A52AEE26AB00A1766E /* CharacterDetailCoordinator.swift in Sources */,
+				4797CA3D2AFE0BF6001D80E9 /* OriginViewController.swift in Sources */,
 				4746D7B22AD803FE002AC15F /* ApiClientService.swift in Sources */,
 				475DF2B92AF252D900A1766E /* LoadCharacterDetailUseCase.swift in Sources */,
 				472398CF2ADD4154004C4D47 /* Location.swift in Sources */,

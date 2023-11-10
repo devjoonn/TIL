@@ -18,6 +18,7 @@ final class LocationCoordinator: Coordinator {
     
     func start() {
         let controller = locationFactory.makeModule(locationCoordinator: self)
+        controller.title = "Location Detail"
         navigation.pushViewController(controller, animated: true)
     }
 }

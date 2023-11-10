@@ -13,6 +13,7 @@ protocol LocationFactory {
 
 struct LocationFactoryImp: LocationFactory {
     func makeModule(locationCoordinator: LocationCoordinator) -> UIViewController {
-        return UIViewController()
+        let controller = LocationDetailViewController()
+        return controller
     }
 }

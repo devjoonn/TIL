@@ -18,6 +18,7 @@ final class OriginCoordinator: Coordinator {
     
     func start() {
         let controller = originFactory.makeModule(coordinator: self)
+        controller.title = "Origin"
         navigation.pushViewController(controller, animated: true)
     }
 }

@@ -14,6 +14,7 @@ protocol OriginFactory {
 
 struct OriginFactoryImp: OriginFactory {
     func makeModule(coordinator: OriginCoordinator) -> UIViewController {
-        UIViewController()
+        let controller = OriginViewController()
+        return controller
     }
 }
