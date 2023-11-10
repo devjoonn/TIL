@@ -58,6 +58,10 @@
 		478D32A52AD6B14B00B50663 /* HomeMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D32A42AD6B14B00B50663 /* HomeMenuViewModel.swift */; };
 		478D32A72AD6B1DD00B50663 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D32A62AD6B1DD00B50663 /* StateController.swift */; };
 		478D32A92AD6B28B00B50663 /* ItemHomeMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D32A82AD6B28B00B50663 /* ItemHomeMenuViewModel.swift */; };
+		4797CA302AFE01DF001D80E9 /* OriginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4797CA2F2AFE01DF001D80E9 /* OriginCoordinator.swift */; };
+		4797CA322AFE0210001D80E9 /* OriginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4797CA312AFE0210001D80E9 /* OriginFactory.swift */; };
+		4797CA342AFE0618001D80E9 /* LocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4797CA332AFE0618001D80E9 /* LocationFactory.swift */; };
+		4797CA362AFE0661001D80E9 /* LocationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4797CA352AFE0661001D80E9 /* LocationCoordinator.swift */; };
 		47980BB22ADA7714001946F8 /* CharactersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB12ADA7714001946F8 /* CharactersFactory.swift */; };
 		47980BB52ADA7780001946F8 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB42ADA7780001946F8 /* CharactersViewController.swift */; };
 		47980BB72ADA78A1001946F8 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB62ADA78A1001946F8 /* CharactersCoordinator.swift */; };
@@ -153,6 +157,10 @@
 		478D32A42AD6B14B00B50663 /* HomeMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuViewModel.swift; sourceTree = "<group>"; };
 		478D32A62AD6B1DD00B50663 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		478D32A82AD6B28B00B50663 /* ItemHomeMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuViewModel.swift; sourceTree = "<group>"; };
+		4797CA2F2AFE01DF001D80E9 /* OriginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginCoordinator.swift; sourceTree = "<group>"; };
+		4797CA312AFE0210001D80E9 /* OriginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginFactory.swift; sourceTree = "<group>"; };
+		4797CA332AFE0618001D80E9 /* LocationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFactory.swift; sourceTree = "<group>"; };
+		4797CA352AFE0661001D80E9 /* LocationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinator.swift; sourceTree = "<group>"; };
 		47980BB12ADA7714001946F8 /* CharactersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFactory.swift; sourceTree = "<group>"; };
 		47980BB42ADA7780001946F8 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		47980BB62ADA78A1001946F8 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
@@ -515,6 +523,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		4797CA2D2AFE0123001D80E9 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				47FBEEA82AD2A3BB00719074 /* Coordinator.swift */,
+				47FB61402AD41F5300D4F5CF /* AppCoordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
 		47980BB32ADA7770001946F8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -824,8 +841,7 @@
 		47FBEEA12AD17C4700719074 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				47FBEEA82AD2A3BB00719074 /* Coordinator.swift */,
-				47FB61402AD41F5300D4F5CF /* AppCoordinator.swift */,
+				4797CA2D2AFE0123001D80E9 /* AppCoordinator */,
 				47FBEEA32AD17C7000719074 /* CoordinatorScreens */,
 				47FBEEA22AD17C5A00719074 /* Utils */,
 			);
@@ -845,6 +861,8 @@
 				47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */,
 				47980BB62ADA78A1001946F8 /* CharactersCoordinator.swift */,
 				475DF2A42AEE26AB00A1766E /* CharacterDetailCoordinator.swift */,
+				4797CA2F2AFE01DF001D80E9 /* OriginCoordinator.swift */,
+				4797CA352AFE0661001D80E9 /* LocationCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -856,6 +874,8 @@
 				47F169252AD55DDA00E1BD0B /* HomeFactory.swift */,
 				47980BB12ADA7714001946F8 /* CharactersFactory.swift */,
 				475DF2A62AEE284A00A1766E /* CharacterDetailFactory.swift */,
+				4797CA312AFE0210001D80E9 /* OriginFactory.swift */,
+				4797CA332AFE0618001D80E9 /* LocationFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1024,7 +1044,10 @@
 				478D32922AD698EA00B50663 /* Reusable.swift in Sources */,
 				472398F42ADD585A004C4D47 /* BaseViewModel.swift in Sources */,
 				472398F12ADD571B004C4D47 /* ItemCharacterViewModel.swift in Sources */,
+				4797CA362AFE0661001D80E9 /* LocationCoordinator.swift in Sources */,
 				478D32A12AD6AF2400B50663 /* LoadMenuUseCase.swift in Sources */,
+				4797CA302AFE01DF001D80E9 /* OriginCoordinator.swift in Sources */,
+				4797CA322AFE0210001D80E9 /* OriginFactory.swift in Sources */,
 				471806F52AE67255005AC850 /* UIImageView+Utils.swift in Sources */,
 				47FB61432AD41FBA00D4F5CF /* AppFactory.swift in Sources */,
 				47D7B1542AE4F42F00C40805 /* ImageDataUseCase.swift in Sources */,
@@ -1050,6 +1073,7 @@
 				472398E02ADD4F8C004C4D47 /* CharactersRepository.swift in Sources */,
 				4746D8152AD92562002AC15F /* ViewValues.swift in Sources */,
 				475DF2B02AF24B6F00A1766E /* CharacterDetailRepository.swift in Sources */,
+				4797CA342AFE0618001D80E9 /* LocationFactory.swift in Sources */,
 				47F169242AD55D3200E1BD0B /* HomeCoordinator.swift in Sources */,
 				475DF2A72AEE284A00A1766E /* CharacterDetailFactory.swift in Sources */,
 				475DF2B32AF24C3600A1766E /* CharacterDetailRepositoryImp.swift in Sources */,

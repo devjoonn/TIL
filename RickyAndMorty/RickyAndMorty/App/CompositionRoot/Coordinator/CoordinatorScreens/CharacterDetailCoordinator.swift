@@ -22,12 +22,15 @@ final class CharacterDetailCoordinator: Coordinator {
     }
 }
 
+// DetailCoordinator에 CharacterDetailViewControllerCoordinator Delegate를 연결
 extension CharacterDetailCoordinator: CharacterDetailViewControllerCoordinator {
     func didTapOriginButton() {
-        print("origin")
+        let originCoordinator = characterDetailFactory.makeOriginCoordinator(navigation: navigation)
+        originCoordinator.start()
     }
     
     func didTapLocationButton() {
-        print("location")
+        let locationCoordinator = characterDetailFactory.makeLocationCoordinator(navigation: navigation)
+        locationCoordinator.start()
     }
 }
