@@ -30,7 +30,7 @@ extension CharacterDetailCoordinator: CharacterDetailViewControllerCoordinator {
     }
     
     func didTapLocationButton() {
-        let locationCoordinator = characterDetailFactory.makeLocationCoordinator(navigation: navigation)
+        let locationCoordinator = characterDetailFactory.makeLocationDetailCoordinator(navigation: navigation)
         locationCoordinator.start()
     }
 }

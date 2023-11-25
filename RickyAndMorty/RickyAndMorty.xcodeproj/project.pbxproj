@@ -75,6 +75,9 @@
 		47D7B1512AE4F2C900C40805 /* ImageDataRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B1502AE4F2C900C40805 /* ImageDataRepositoryImp.swift */; };
 		47D7B1542AE4F42F00C40805 /* ImageDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B1532AE4F42F00C40805 /* ImageDataUseCase.swift */; };
 		47D7B1562AE4F5A300C40805 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B1552AE4F5A300C40805 /* AppContainer.swift */; };
+		47E8D4552B12581300F1A7E1 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8D4542B12581300F1A7E1 /* LocationViewController.swift */; };
+		47E8D4572B12593600F1A7E1 /* LocationDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8D4562B12593600F1A7E1 /* LocationDetailFactory.swift */; };
+		47E8D4592B1259A600F1A7E1 /* LocationDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8D4582B1259A600F1A7E1 /* LocationDetailCoordinator.swift */; };
 		47F169242AD55D3200E1BD0B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */; };
 		47F169262AD55DDA00E1BD0B /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169252AD55DDA00E1BD0B /* HomeFactory.swift */; };
 		47F169282AD5662C00E1BD0B /* ItemHomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F169272AD5662C00E1BD0B /* ItemHomeMenuCell.swift */; };
@@ -176,6 +179,9 @@
 		47D7B1502AE4F2C900C40805 /* ImageDataRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataRepositoryImp.swift; sourceTree = "<group>"; };
 		47D7B1532AE4F42F00C40805 /* ImageDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataUseCase.swift; sourceTree = "<group>"; };
 		47D7B1552AE4F5A300C40805 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		47E8D4542B12581300F1A7E1 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		47E8D4562B12593600F1A7E1 /* LocationDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailFactory.swift; sourceTree = "<group>"; };
+		47E8D4582B1259A600F1A7E1 /* LocationDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailCoordinator.swift; sourceTree = "<group>"; };
 		47F169232AD55D3200E1BD0B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		47F169252AD55DDA00E1BD0B /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		47F169272AD5662C00E1BD0B /* ItemHomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuCell.swift; sourceTree = "<group>"; };
@@ -593,6 +599,22 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		47E8D4522B1257F400F1A7E1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				47E8D4532B1257FF00F1A7E1 /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		47E8D4532B1257FF00F1A7E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47E8D4542B12581300F1A7E1 /* LocationViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		47FBEE4D2AD1760C00719074 = {
 			isa = PBXGroup;
 			children = (
@@ -744,6 +766,7 @@
 		47FBEE932AD17B3200719074 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				47E8D4522B1257F400F1A7E1 /* Presentation */,
 			);
 			path = Locations;
 			sourceTree = "<group>";
@@ -885,6 +908,7 @@
 				475DF2A42AEE26AB00A1766E /* CharacterDetailCoordinator.swift */,
 				4797CA2F2AFE01DF001D80E9 /* OriginCoordinator.swift */,
 				4797CA352AFE0661001D80E9 /* LocationCoordinator.swift */,
+				47E8D4582B1259A600F1A7E1 /* LocationDetailCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -898,6 +922,7 @@
 				475DF2A62AEE284A00A1766E /* CharacterDetailFactory.swift */,
 				4797CA312AFE0210001D80E9 /* OriginFactory.swift */,
 				4797CA332AFE0618001D80E9 /* LocationFactory.swift */,
+				47E8D4562B12593600F1A7E1 /* LocationDetailFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1057,6 +1082,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E8D4592B1259A600F1A7E1 /* LocationDetailCoordinator.swift in Sources */,
 				472398D52ADD4228004C4D47 /* CharacterDTO.swift in Sources */,
 				472398DC2ADD4ED2004C4D47 /* InfoDTO.swift in Sources */,
 				47D7B1492AE4EFC000C40805 /* ApiClientServiceImp+RemoteImageDataService.swift in Sources */,
@@ -1081,7 +1107,9 @@
 				47FBEEA92AD2A3BB00719074 /* Coordinator.swift in Sources */,
 				478D32982AD6AD2100B50663 /* MenuRepository.swift in Sources */,
 				47FBEE5E2AD1760C00719074 /* HomeMenuController.swift in Sources */,
+				47E8D4552B12581300F1A7E1 /* LocationViewController.swift in Sources */,
 				47D7B1562AE4F5A300C40805 /* AppContainer.swift in Sources */,
+				47E8D4572B12593600F1A7E1 /* LocationDetailFactory.swift in Sources */,
 				478D32A72AD6B1DD00B50663 /* StateController.swift in Sources */,
 				472398C92ADD3DEC004C4D47 /* String+empty.swift in Sources */,
 				4746D8132AD91EFD002AC15F /* SpinnerDisplayable.swift in Sources */,

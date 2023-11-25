@@ -9,7 +9,8 @@ import Combine
 
 protocol HomeFactory {
     func makeModule(coordinator: HomeCoordinator) -> UIViewController
-    func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator
+    func makeCharactersCoordinator(navigation: UINavigationController, urlList: String) -> Coordinator
+    func makeLocationCoordinator(navigation: UINavigationController, urlLocations: String) -> Coordinator
 }
 
 struct  HomeFactoryImp: HomeFactory {
@@ -29,10 +30,16 @@ struct  HomeFactoryImp: HomeFactory {
         return homeMenuController
     }
     
-    func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator {
+    func makeCharactersCoordinator(navigation: UINavigationController, urlList: String) -> Coordinator {
         let characterFactory = CharactersFactoryImp(appContainer: appContainer, urlList: urlList)
         let characterCoordinator = CharactersCoordinator(navigation: navigation, charactersFactory: characterFactory)
         return characterCoordinator
+    }
+    
+    func makeLocationCoordinator(navigation: UINavigationController, urlLocations: String) -> Coordinator {
+        let locationFactory = LocationFactoryImp(urlLocations: urlLocations, appContainer: appContainer)
+        let locationCoordinator = LocationCoordinator(navigation: navigation, locationFactory: locationFactory)
+        return locationCoordinator
     }
     
     private func makeLayout() -> UICollectionViewFlowLayout {

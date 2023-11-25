@@ -11,7 +11,7 @@ import Combine
 protocol CharacterDetailFactory {
     func makeModule(coordinator: CharacterDetailViewControllerCoordinator) -> UIViewController
     func makeOriginCoordinator(navigation: UINavigationController) -> Coordinator
-    func makeLocationCoordinator(navigation: UINavigationController) -> Coordinator
+    func makeLocationDetailCoordinator(navigation: UINavigationController) -> Coordinator
 }
 
 struct CharacterDetailFactoryImp: CharacterDetailFactory {
@@ -40,9 +40,9 @@ struct CharacterDetailFactoryImp: CharacterDetailFactory {
         return originCoordinator
     }
     
-    func makeLocationCoordinator(navigation: UINavigationController) -> Coordinator {
-        let locationFactory = LocationFactoryImp()
-        let locationCoordinator = LocationCoordinator(locationFactory: locationFactory, navigation: navigation)
+    func makeLocationDetailCoordinator(navigation: UINavigationController) -> Coordinator {
+        let locationDetailFactory = LocationDetailFactoryImp()
+        let locationCoordinator = LocationDetailCoordinator(locationDetailFactory: locationDetailFactory, navigation: navigation)
         return locationCoordinator
     }
 }

@@ -30,14 +30,14 @@ extension HomeCoordinator: HomeMenuControllerCoordinator {
         case "episodes":
             goToEpisodes()
         case "locations":
-            goToLocations()
+            goToLocations(urlLocations: model.url)
         default:
             break
         }
     }
     
     private func goToCharacters(urlList: String) {
-        let characterCoordinator = homeFactory.makeCoordinatorCharacters(navigation: navigation, urlList: urlList)
+        let characterCoordinator = homeFactory.makeCharactersCoordinator(navigation: navigation, urlList: urlList)
         characterCoordinator.start()
     }
     
@@ -45,7 +45,8 @@ extension HomeCoordinator: HomeMenuControllerCoordinator {
         print("Episodes")
     }
     
-    private func goToLocations() {
-        print("Locations")
+    private func goToLocations(urlLocations: String) {
+        let locationCoordinator = homeFactory.makeLocationCoordinator(navigation: navigation, urlLocations: urlLocations)
+        locationCoordinator.start()
     }
 }

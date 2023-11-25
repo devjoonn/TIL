@@ -12,8 +12,11 @@ protocol LocationFactory {
 }
 
 struct LocationFactoryImp: LocationFactory {
+    private(set) var urlLocations: String
+    private(set) var appContainer: AppContainer
+    
     func makeModule(locationCoordinator: LocationCoordinator) -> UIViewController {
-        let controller = LocationDetailViewController()
+        let controller = LocationViewController()
         return controller
     }
 }

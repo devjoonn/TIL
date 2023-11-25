@@ -11,14 +11,15 @@ final class LocationCoordinator: Coordinator {
     private var locationFactory: LocationFactory
     var navigation: UINavigationController
     
-    init(locationFactory: LocationFactory, navigation: UINavigationController) {
-        self.locationFactory = locationFactory
+    init(navigation: UINavigationController, locationFactory: LocationFactory) {
         self.navigation = navigation
+        self.locationFactory = locationFactory
     }
     
     func start() {
         let controller = locationFactory.makeModule(locationCoordinator: self)
-        controller.title = "Location Detail"
+        controller.title = "Location"
+        navigation.navigationBar.prefersLargeTitles = true
         navigation.pushViewController(controller, animated: true)
     }
 }
