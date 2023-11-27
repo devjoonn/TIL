@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470EDD6A2B148F5F00A3AE8F /* LocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470EDD692B148F5F00A3AE8F /* LocationsRepository.swift */; };
+		470EDD6E2B14900E00A3AE8F /* LocationRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470EDD6D2B14900E00A3AE8F /* LocationRepositoryImp.swift */; };
+		470EDD712B1490B700A3AE8F /* ResultLocationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470EDD702B1490B700A3AE8F /* ResultLocationDTO.swift */; };
+		470EDD732B1490F900A3AE8F /* ResultLocationDTO+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470EDD722B1490F900A3AE8F /* ResultLocationDTO+Mapper.swift */; };
+		470EDD762B14920700A3AE8F /* LoadLocationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470EDD752B14920600A3AE8F /* LoadLocationsUseCase.swift */; };
 		471806F52AE67255005AC850 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471806F42AE67255005AC850 /* UIImageView+Utils.swift */; };
 		472398C52ADD3CF0004C4D47 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472398C42ADD3CF0004C4D47 /* Character.swift */; };
 		472398C72ADD3D2B004C4D47 /* StatusCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472398C62ADD3D2B004C4D47 /* StatusCharacter.swift */; };
@@ -111,6 +116,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		470EDD692B148F5F00A3AE8F /* LocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsRepository.swift; sourceTree = "<group>"; };
+		470EDD6D2B14900E00A3AE8F /* LocationRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepositoryImp.swift; sourceTree = "<group>"; };
+		470EDD702B1490B700A3AE8F /* ResultLocationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLocationDTO.swift; sourceTree = "<group>"; };
+		470EDD722B1490F900A3AE8F /* ResultLocationDTO+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultLocationDTO+Mapper.swift"; sourceTree = "<group>"; };
+		470EDD752B14920600A3AE8F /* LoadLocationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadLocationsUseCase.swift; sourceTree = "<group>"; };
 		471806F42AE67255005AC850 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
 		472398C42ADD3CF0004C4D47 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		472398C62ADD3D2B004C4D47 /* StatusCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCharacter.swift; sourceTree = "<group>"; };
@@ -226,6 +236,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		470EDD672B148F2F00A3AE8F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				470EDD742B1491EB00A3AE8F /* Usecases */,
+				470EDD682B148F3B00A3AE8F /* RepositoriesInterface */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		470EDD682B148F3B00A3AE8F /* RepositoriesInterface */ = {
+			isa = PBXGroup;
+			children = (
+				470EDD692B148F5F00A3AE8F /* LocationsRepository.swift */,
+			);
+			path = RepositoriesInterface;
+			sourceTree = "<group>";
+		};
+		470EDD6B2B148FD300A3AE8F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				470EDD6C2B148FDB00A3AE8F /* RepositoriesImplementations */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		470EDD6C2B148FDB00A3AE8F /* RepositoriesImplementations */ = {
+			isa = PBXGroup;
+			children = (
+				470EDD6D2B14900E00A3AE8F /* LocationRepositoryImp.swift */,
+			);
+			path = RepositoriesImplementations;
+			sourceTree = "<group>";
+		};
+		470EDD6F2B1490A100A3AE8F /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				470EDD702B1490B700A3AE8F /* ResultLocationDTO.swift */,
+				470EDD722B1490F900A3AE8F /* ResultLocationDTO+Mapper.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		470EDD742B1491EB00A3AE8F /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				470EDD752B14920600A3AE8F /* LoadLocationsUseCase.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
 		472398C32ADD3CCD004C4D47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -766,6 +826,9 @@
 		47FBEE932AD17B3200719074 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				470EDD6F2B1490A100A3AE8F /* DTO */,
+				470EDD6B2B148FD300A3AE8F /* Data */,
+				470EDD672B148F2F00A3AE8F /* Domain */,
 				47E8D4522B1257F400F1A7E1 /* Presentation */,
 			);
 			path = Locations;
@@ -1092,6 +1155,7 @@
 				478D32922AD698EA00B50663 /* Reusable.swift in Sources */,
 				472398F42ADD585A004C4D47 /* BaseViewModel.swift in Sources */,
 				472398F12ADD571B004C4D47 /* ItemCharacterViewModel.swift in Sources */,
+				470EDD6A2B148F5F00A3AE8F /* LocationsRepository.swift in Sources */,
 				4797CA362AFE0661001D80E9 /* LocationCoordinator.swift in Sources */,
 				478D32A12AD6AF2400B50663 /* LoadMenuUseCase.swift in Sources */,
 				4797CA302AFE01DF001D80E9 /* OriginCoordinator.swift in Sources */,
@@ -1117,6 +1181,7 @@
 				478D329B2AD6ADB500B50663 /* MenuItem.swift in Sources */,
 				472398CB2ADD3F4B004C4D47 /* Specie.swift in Sources */,
 				47FB61412AD41F5300D4F5CF /* AppCoordinator.swift in Sources */,
+				470EDD762B14920700A3AE8F /* LoadLocationsUseCase.swift in Sources */,
 				47FBEE5A2AD1760C00719074 /* AppDelegate.swift in Sources */,
 				47826F172ADFD5800067FC6D /* UITableViewController+SpinnerLast.swift in Sources */,
 				47F169262AD55DDA00E1BD0B /* HomeFactory.swift in Sources */,
@@ -1124,7 +1189,9 @@
 				4746D8152AD92562002AC15F /* ViewValues.swift in Sources */,
 				475DF2B02AF24B6F00A1766E /* CharacterDetailRepository.swift in Sources */,
 				4797CA342AFE0618001D80E9 /* LocationFactory.swift in Sources */,
+				470EDD6E2B14900E00A3AE8F /* LocationRepositoryImp.swift in Sources */,
 				47F169242AD55D3200E1BD0B /* HomeCoordinator.swift in Sources */,
+				470EDD712B1490B700A3AE8F /* ResultLocationDTO.swift in Sources */,
 				475DF2A72AEE284A00A1766E /* CharacterDetailFactory.swift in Sources */,
 				475DF2B32AF24C3600A1766E /* CharacterDetailRepositoryImp.swift in Sources */,
 				4746D7B82AD80582002AC15F /* ApiError.swift in Sources */,
@@ -1151,6 +1218,7 @@
 				47F169282AD5662C00E1BD0B /* ItemHomeMenuCell.swift in Sources */,
 				47826F192AE0D60C0067FC6D /* LastPageValidationUseCase.swift in Sources */,
 				47980BBA2ADA860F001946F8 /* ItemCharacterTableViewCell.swift in Sources */,
+				470EDD732B1490F900A3AE8F /* ResultLocationDTO+Mapper.swift in Sources */,
 				47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */,
 				475DF2A52AEE26AB00A1766E /* CharacterDetailCoordinator.swift in Sources */,
 				4797CA3D2AFE0BF6001D80E9 /* OriginViewController.swift in Sources */,
