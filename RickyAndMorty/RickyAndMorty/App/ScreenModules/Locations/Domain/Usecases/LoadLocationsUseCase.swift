@@ -11,7 +11,7 @@ protocol LoadLocationsUseCase {
 
 struct LoadLocationsUseCaseImp: LoadLocationsUseCase {
     private(set) var locationRepository: LocationsRepository
-    private var urlLocations: String
+    private(set) var urlLocations: String
     
     mutating func excute() async -> Result<[Location], Error> {
         guard !urlLocations.isEmpty else { return .success([]) }

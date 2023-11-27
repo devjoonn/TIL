@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 protocol LocationFactory {
     func makeModule(locationCoordinator: LocationCoordinator) -> UIViewController
@@ -16,7 +17,15 @@ struct LocationFactoryImp: LocationFactory {
     private(set) var appContainer: AppContainer
     
     func makeModule(locationCoordinator: LocationCoordinator) -> UIViewController {
-        let controller = LocationViewController()
+        let state = PassthroughSubject<StateController, Never>()
+        let locationRepository = LocationRepositoryImp(remoteServices: appContainer.apiClient)
+        let loadLocationsUseCase = LoadLocationsUseCaseImp(locationRepository: locationRepository,
+                                                           urlLocations: urlLocations)
+        let lastPageUseCase = LastPageValidationUseCaseImp()
+        let locationViewModel = LocationViewModelImp(state: state,
+                                                     loadLocationsUseCase: loadLocationsUseCase,
+                                                     lastPageUseCase: lastPageUseCase)
+        let controller = LocationsViewController(viewModel: locationViewModel)
         return controller
     }
 }
