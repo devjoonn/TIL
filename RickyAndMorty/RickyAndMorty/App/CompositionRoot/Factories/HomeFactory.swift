@@ -11,6 +11,7 @@ protocol HomeFactory {
     func makeModule(coordinator: HomeCoordinator) -> UIViewController
     func makeCharactersCoordinator(navigation: UINavigationController, urlList: String) -> Coordinator
     func makeLocationCoordinator(navigation: UINavigationController, urlLocations: String) -> Coordinator
+    func makeEpisodesCoordinator(navigation: UINavigationController, urlEpisodes: String) -> Coordinator
 }
 
 struct  HomeFactoryImp: HomeFactory {
@@ -40,6 +41,12 @@ struct  HomeFactoryImp: HomeFactory {
         let locationFactory = LocationFactoryImp(urlLocations: urlLocations, appContainer: appContainer)
         let locationCoordinator = LocationCoordinator(navigation: navigation, locationFactory: locationFactory)
         return locationCoordinator
+    }
+    
+    func makeEpisodesCoordinator(navigation: UINavigationController, urlEpisodes: String) -> Coordinator {
+        let episodesFactory = EpisodesFactoryImp(urlEpisodes: urlEpisodes, appContainer: appContainer)
+        let episodesCoordinator = EpisodesCoordinator(navigation: navigation, episodesFactory: episodesFactory)
+        return episodesCoordinator
     }
     
     private func makeLayout() -> UICollectionViewFlowLayout {

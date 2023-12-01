@@ -35,6 +35,9 @@
 		472398EF2ADD569B004C4D47 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472398EE2ADD569B004C4D47 /* CharactersViewModel.swift */; };
 		472398F12ADD571B004C4D47 /* ItemCharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472398F02ADD571B004C4D47 /* ItemCharacterViewModel.swift */; };
 		472398F42ADD585A004C4D47 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472398F32ADD585A004C4D47 /* BaseViewModel.swift */; };
+		47303E712B1A3C94005B7152 /* EpisodesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47303E702B1A3C94005B7152 /* EpisodesFactory.swift */; };
+		47303E732B1A3D3C005B7152 /* EpisodesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47303E722B1A3D3C005B7152 /* EpisodesCoordinator.swift */; };
+		47303E772B1A40F0005B7152 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47303E762B1A40F0005B7152 /* EpisodesViewController.swift */; };
 		4746D7B22AD803FE002AC15F /* ApiClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D7B12AD803FE002AC15F /* ApiClientService.swift */; };
 		4746D7B52AD804AF002AC15F /* ApiClientServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D7B42AD804AF002AC15F /* ApiClientServiceImp.swift */; };
 		4746D7B82AD80582002AC15F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D7B72AD80582002AC15F /* ApiError.swift */; };
@@ -147,6 +150,9 @@
 		472398EE2ADD569B004C4D47 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
 		472398F02ADD571B004C4D47 /* ItemCharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCharacterViewModel.swift; sourceTree = "<group>"; };
 		472398F32ADD585A004C4D47 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		47303E702B1A3C94005B7152 /* EpisodesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesFactory.swift; sourceTree = "<group>"; };
+		47303E722B1A3D3C005B7152 /* EpisodesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesCoordinator.swift; sourceTree = "<group>"; };
+		47303E762B1A40F0005B7152 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		4746D7B12AD803FE002AC15F /* ApiClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientService.swift; sourceTree = "<group>"; };
 		4746D7B42AD804AF002AC15F /* ApiClientServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientServiceImp.swift; sourceTree = "<group>"; };
 		4746D7B72AD80582002AC15F /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -401,6 +407,22 @@
 				472398F32ADD585A004C4D47 /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		47303E742B1A40C4005B7152 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				47303E752B1A40CD005B7152 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		47303E752B1A40CD005B7152 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47303E762B1A40F0005B7152 /* EpisodesViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4746D7B02AD803D4002AC15F /* AppClient */ = {
@@ -854,6 +876,7 @@
 		47FBEE942AD17B3E00719074 /* Episodes */ = {
 			isa = PBXGroup;
 			children = (
+				47303E742B1A40C4005B7152 /* Presentation */,
 			);
 			path = Episodes;
 			sourceTree = "<group>";
@@ -989,6 +1012,7 @@
 				4797CA2F2AFE01DF001D80E9 /* OriginCoordinator.swift */,
 				4797CA352AFE0661001D80E9 /* LocationCoordinator.swift */,
 				47E8D4582B1259A600F1A7E1 /* LocationDetailCoordinator.swift */,
+				47303E722B1A3D3C005B7152 /* EpisodesCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -1003,6 +1027,7 @@
 				4797CA312AFE0210001D80E9 /* OriginFactory.swift */,
 				4797CA332AFE0618001D80E9 /* LocationFactory.swift */,
 				47E8D4562B12593600F1A7E1 /* LocationDetailFactory.swift */,
+				47303E702B1A3C94005B7152 /* EpisodesFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1191,6 +1216,7 @@
 				47E8D4552B12581300F1A7E1 /* LocationsViewController.swift in Sources */,
 				47D7B1562AE4F5A300C40805 /* AppContainer.swift in Sources */,
 				47E8D4572B12593600F1A7E1 /* LocationDetailFactory.swift in Sources */,
+				47303E732B1A3D3C005B7152 /* EpisodesCoordinator.swift in Sources */,
 				478D32A72AD6B1DD00B50663 /* StateController.swift in Sources */,
 				472398C92ADD3DEC004C4D47 /* String+empty.swift in Sources */,
 				4746D8132AD91EFD002AC15F /* SpinnerDisplayable.swift in Sources */,
@@ -1230,6 +1256,7 @@
 				478D329E2AD6AE5300B50663 /* MenuRepositoryImp.swift in Sources */,
 				472398E52ADD50AA004C4D47 /* CharacterRepositoryImp.swift in Sources */,
 				4746D80C2AD90FA4002AC15F /* MenuDTO+Mapper.swift in Sources */,
+				47303E712B1A3C94005B7152 /* EpisodesFactory.swift in Sources */,
 				4797CA3A2AFE0B6D001D80E9 /* LocationDetailViewController.swift in Sources */,
 				47D7B1512AE4F2C900C40805 /* ImageDataRepositoryImp.swift in Sources */,
 				472398E72ADD516C004C4D47 /* ResultsCharactersDTO+Mapping.swift in Sources */,
@@ -1238,6 +1265,7 @@
 				47F169282AD5662C00E1BD0B /* ItemHomeMenuCell.swift in Sources */,
 				47826F192AE0D60C0067FC6D /* LastPageValidationUseCase.swift in Sources */,
 				47980BBA2ADA860F001946F8 /* ItemCharacterTableViewCell.swift in Sources */,
+				47303E772B1A40F0005B7152 /* EpisodesViewController.swift in Sources */,
 				470EDD732B1490F900A3AE8F /* ResultLocationDTO+Mapper.swift in Sources */,
 				47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */,
 				475DF2A52AEE26AB00A1766E /* CharacterDetailCoordinator.swift in Sources */,
