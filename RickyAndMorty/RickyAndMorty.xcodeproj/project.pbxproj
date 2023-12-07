@@ -106,6 +106,8 @@
 		47FD226E2B21F553006EE4C3 /* EpisodeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD226D2B21F553006EE4C3 /* EpisodeDTO.swift */; };
 		47FD22702B21F57B006EE4C3 /* ResultEpisodesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD226F2B21F57B006EE4C3 /* ResultEpisodesDTO.swift */; };
 		47FD22722B21F5B0006EE4C3 /* ResultEpisodesDTO+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD22712B21F5B0006EE4C3 /* ResultEpisodesDTO+Mapper.swift */; };
+		47FD22742B221132006EE4C3 /* EpisodesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD22732B221132006EE4C3 /* EpisodesRepository.swift */; };
+		47FD22762B221195006EE4C3 /* EpisodesRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD22752B221195006EE4C3 /* EpisodesRepositoryImp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +231,8 @@
 		47FD226D2B21F553006EE4C3 /* EpisodeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDTO.swift; sourceTree = "<group>"; };
 		47FD226F2B21F57B006EE4C3 /* ResultEpisodesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultEpisodesDTO.swift; sourceTree = "<group>"; };
 		47FD22712B21F5B0006EE4C3 /* ResultEpisodesDTO+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultEpisodesDTO+Mapper.swift"; sourceTree = "<group>"; };
+		47FD22732B221132006EE4C3 /* EpisodesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesRepository.swift; sourceTree = "<group>"; };
+		47FD22752B221195006EE4C3 /* EpisodesRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesRepositoryImp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1097,6 +1101,7 @@
 		47FD22672B21F4DD006EE4C3 /* RepositoriesInterface */ = {
 			isa = PBXGroup;
 			children = (
+				47FD22732B221132006EE4C3 /* EpisodesRepository.swift */,
 			);
 			path = RepositoriesInterface;
 			sourceTree = "<group>";
@@ -1121,6 +1126,7 @@
 		47FD226A2B21F502006EE4C3 /* RepositoriesImplementation */ = {
 			isa = PBXGroup;
 			children = (
+				47FD22752B221195006EE4C3 /* EpisodesRepositoryImp.swift */,
 			);
 			path = RepositoriesImplementation;
 			sourceTree = "<group>";
@@ -1313,6 +1319,7 @@
 				4746D81B2AD9350B002AC15F /* Images.swift in Sources */,
 				470EDD7B2B14EA0600A3AE8F /* ItemLocationTableViewCell.swift in Sources */,
 				472398DA2ADD4E9E004C4D47 /* LocationDTO.swift in Sources */,
+				47FD22742B221132006EE4C3 /* EpisodesRepository.swift in Sources */,
 				4746D7BB2AD8090E002AC15F /* HttpResponseStatus.swift in Sources */,
 				4746D80E2AD91038002AC15F /* PropertyIterator.swift in Sources */,
 				4746D8192AD933CD002AC15F /* AppLocalized.swift in Sources */,
@@ -1342,6 +1349,7 @@
 				47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */,
 				475DF2A52AEE26AB00A1766E /* CharacterDetailCoordinator.swift in Sources */,
 				4797CA3D2AFE0BF6001D80E9 /* OriginViewController.swift in Sources */,
+				47FD22762B221195006EE4C3 /* EpisodesRepositoryImp.swift in Sources */,
 				4746D7B22AD803FE002AC15F /* ApiClientService.swift in Sources */,
 				475DF2B92AF252D900A1766E /* LoadCharacterDetailUseCase.swift in Sources */,
 				472398CF2ADD4154004C4D47 /* Location.swift in Sources */,
