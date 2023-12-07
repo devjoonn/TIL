@@ -102,6 +102,10 @@
 		47FBEE662AD1760D00719074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FBEE642AD1760D00719074 /* LaunchScreen.storyboard */; };
 		47FBEE712AD1760E00719074 /* RickyAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEE702AD1760E00719074 /* RickyAndMortyTests.swift */; };
 		47FBEEA92AD2A3BB00719074 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEEA82AD2A3BB00719074 /* Coordinator.swift */; };
+		47FD226C2B21F528006EE4C3 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD226B2B21F528006EE4C3 /* Episode.swift */; };
+		47FD226E2B21F553006EE4C3 /* EpisodeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD226D2B21F553006EE4C3 /* EpisodeDTO.swift */; };
+		47FD22702B21F57B006EE4C3 /* ResultEpisodesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD226F2B21F57B006EE4C3 /* ResultEpisodesDTO.swift */; };
+		47FD22722B21F5B0006EE4C3 /* ResultEpisodesDTO+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD22712B21F5B0006EE4C3 /* ResultEpisodesDTO+Mapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +225,10 @@
 		47FBEE702AD1760E00719074 /* RickyAndMortyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyAndMortyTests.swift; sourceTree = "<group>"; };
 		47FBEE762AD1760E00719074 /* RickyAndMortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickyAndMortyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47FBEEA82AD2A3BB00719074 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		47FD226B2B21F528006EE4C3 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		47FD226D2B21F553006EE4C3 /* EpisodeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDTO.swift; sourceTree = "<group>"; };
+		47FD226F2B21F57B006EE4C3 /* ResultEpisodesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultEpisodesDTO.swift; sourceTree = "<group>"; };
+		47FD22712B21F5B0006EE4C3 /* ResultEpisodesDTO+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultEpisodesDTO+Mapper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -876,6 +884,8 @@
 		47FBEE942AD17B3E00719074 /* Episodes */ = {
 			isa = PBXGroup;
 			children = (
+				47FD22652B21F4B2006EE4C3 /* Data */,
+				47FD22642B21F4A6006EE4C3 /* Domain */,
 				47303E742B1A40C4005B7152 /* Presentation */,
 			);
 			path = Episodes;
@@ -1057,6 +1067,64 @@
 			path = System;
 			sourceTree = "<group>";
 		};
+		47FD22642B21F4A6006EE4C3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				47FD22682B21F4EA006EE4C3 /* UseCases */,
+				47FD22672B21F4DD006EE4C3 /* RepositoriesInterface */,
+				47FD22662B21F4D4006EE4C3 /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		47FD22652B21F4B2006EE4C3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				47FD226A2B21F502006EE4C3 /* RepositoriesImplementation */,
+				47FD22692B21F4F9006EE4C3 /* DTO */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		47FD22662B21F4D4006EE4C3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				47FD226B2B21F528006EE4C3 /* Episode.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		47FD22672B21F4DD006EE4C3 /* RepositoriesInterface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoriesInterface;
+			sourceTree = "<group>";
+		};
+		47FD22682B21F4EA006EE4C3 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		47FD22692B21F4F9006EE4C3 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				47FD226D2B21F553006EE4C3 /* EpisodeDTO.swift */,
+				47FD226F2B21F57B006EE4C3 /* ResultEpisodesDTO.swift */,
+				47FD22712B21F5B0006EE4C3 /* ResultEpisodesDTO+Mapper.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		47FD226A2B21F502006EE4C3 /* RepositoriesImplementation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoriesImplementation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1215,6 +1283,7 @@
 				47FBEE5E2AD1760C00719074 /* HomeMenuController.swift in Sources */,
 				47E8D4552B12581300F1A7E1 /* LocationsViewController.swift in Sources */,
 				47D7B1562AE4F5A300C40805 /* AppContainer.swift in Sources */,
+				47FD226C2B21F528006EE4C3 /* Episode.swift in Sources */,
 				47E8D4572B12593600F1A7E1 /* LocationDetailFactory.swift in Sources */,
 				47303E732B1A3D3C005B7152 /* EpisodesCoordinator.swift in Sources */,
 				478D32A72AD6B1DD00B50663 /* StateController.swift in Sources */,
@@ -1257,9 +1326,12 @@
 				472398E52ADD50AA004C4D47 /* CharacterRepositoryImp.swift in Sources */,
 				4746D80C2AD90FA4002AC15F /* MenuDTO+Mapper.swift in Sources */,
 				47303E712B1A3C94005B7152 /* EpisodesFactory.swift in Sources */,
+				47FD226E2B21F553006EE4C3 /* EpisodeDTO.swift in Sources */,
 				4797CA3A2AFE0B6D001D80E9 /* LocationDetailViewController.swift in Sources */,
 				47D7B1512AE4F2C900C40805 /* ImageDataRepositoryImp.swift in Sources */,
 				472398E72ADD516C004C4D47 /* ResultsCharactersDTO+Mapping.swift in Sources */,
+				47FD22722B21F5B0006EE4C3 /* ResultEpisodesDTO+Mapper.swift in Sources */,
+				47FD22702B21F57B006EE4C3 /* ResultEpisodesDTO.swift in Sources */,
 				475DF2B62AF24D9100A1766E /* CharacterDTO+Mapping.swift in Sources */,
 				47D7B14B2AE4F0B000C40805 /* LocalDataImageService.swift in Sources */,
 				47F169282AD5662C00E1BD0B /* ItemHomeMenuCell.swift in Sources */,
