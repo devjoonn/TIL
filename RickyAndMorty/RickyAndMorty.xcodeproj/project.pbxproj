@@ -51,6 +51,9 @@
 		4746D8172AD9280D002AC15F /* MessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D8162AD9280D002AC15F /* MessageDisplayable.swift */; };
 		4746D8192AD933CD002AC15F /* AppLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D8182AD933CD002AC15F /* AppLocalized.swift */; };
 		4746D81B2AD9350B002AC15F /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746D81A2AD9350B002AC15F /* Images.swift */; };
+		474C00AF2B285D0200503A82 /* ItemEpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C00AE2B285D0200503A82 /* ItemEpisodeViewModel.swift */; };
+		474C00B12B285F1E00503A82 /* ItemEpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C00B02B285F1E00503A82 /* ItemEpisodeTableViewCell.swift */; };
+		474C00B32B285FF900503A82 /* CustomPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C00B22B285FF900503A82 /* CustomPaddingLabel.swift */; };
 		475DF2A32AEE260900A1766E /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475DF2A22AEE260900A1766E /* CharacterDetailViewController.swift */; };
 		475DF2A52AEE26AB00A1766E /* CharacterDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475DF2A42AEE26AB00A1766E /* CharacterDetailCoordinator.swift */; };
 		475DF2A72AEE284A00A1766E /* CharacterDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475DF2A62AEE284A00A1766E /* CharacterDetailFactory.swift */; };
@@ -108,6 +111,7 @@
 		47FD22722B21F5B0006EE4C3 /* ResultEpisodesDTO+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD22712B21F5B0006EE4C3 /* ResultEpisodesDTO+Mapper.swift */; };
 		47FD22742B221132006EE4C3 /* EpisodesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD22732B221132006EE4C3 /* EpisodesRepository.swift */; };
 		47FD22762B221195006EE4C3 /* EpisodesRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD22752B221195006EE4C3 /* EpisodesRepositoryImp.swift */; };
+		47FD22782B22221F006EE4C3 /* LoadEpisodesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD22772B22221F006EE4C3 /* LoadEpisodesUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +176,9 @@
 		4746D8162AD9280D002AC15F /* MessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDisplayable.swift; sourceTree = "<group>"; };
 		4746D8182AD933CD002AC15F /* AppLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalized.swift; sourceTree = "<group>"; };
 		4746D81A2AD9350B002AC15F /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		474C00AE2B285D0200503A82 /* ItemEpisodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEpisodeViewModel.swift; sourceTree = "<group>"; };
+		474C00B02B285F1E00503A82 /* ItemEpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		474C00B22B285FF900503A82 /* CustomPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaddingLabel.swift; sourceTree = "<group>"; };
 		475DF2A22AEE260900A1766E /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		475DF2A42AEE26AB00A1766E /* CharacterDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailCoordinator.swift; sourceTree = "<group>"; };
 		475DF2A62AEE284A00A1766E /* CharacterDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailFactory.swift; sourceTree = "<group>"; };
@@ -233,6 +240,7 @@
 		47FD22712B21F5B0006EE4C3 /* ResultEpisodesDTO+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultEpisodesDTO+Mapper.swift"; sourceTree = "<group>"; };
 		47FD22732B221132006EE4C3 /* EpisodesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesRepository.swift; sourceTree = "<group>"; };
 		47FD22752B221195006EE4C3 /* EpisodesRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesRepositoryImp.swift; sourceTree = "<group>"; };
+		47FD22772B22221F006EE4C3 /* LoadEpisodesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadEpisodesUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,6 +432,7 @@
 		47303E742B1A40C4005B7152 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				474C00AD2B285CE300503A82 /* ViewModel */,
 				47303E752B1A40CD005B7152 /* View */,
 			);
 			path = Presentation;
@@ -433,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				47303E762B1A40F0005B7152 /* EpisodesViewController.swift */,
+				474C00B02B285F1E00503A82 /* ItemEpisodeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -485,8 +495,17 @@
 			children = (
 				4746D8122AD91EFD002AC15F /* SpinnerDisplayable.swift */,
 				4746D8162AD9280D002AC15F /* MessageDisplayable.swift */,
+				474C00B22B285FF900503A82 /* CustomPaddingLabel.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		474C00AD2B285CE300503A82 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				474C00AE2B285D0200503A82 /* ItemEpisodeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		475DF2A12AEE24F000A1766E /* Presentation */ = {
@@ -1109,6 +1128,7 @@
 		47FD22682B21F4EA006EE4C3 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				47FD22772B22221F006EE4C3 /* LoadEpisodesUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1270,6 +1290,7 @@
 				47D7B14E2AE4F20F00C40805 /* ImageDataRepository.swift in Sources */,
 				478D32922AD698EA00B50663 /* Reusable.swift in Sources */,
 				472398F42ADD585A004C4D47 /* BaseViewModel.swift in Sources */,
+				474C00AF2B285D0200503A82 /* ItemEpisodeViewModel.swift in Sources */,
 				472398F12ADD571B004C4D47 /* ItemCharacterViewModel.swift in Sources */,
 				470EDD6A2B148F5F00A3AE8F /* LocationsRepository.swift in Sources */,
 				4797CA362AFE0661001D80E9 /* LocationCoordinator.swift in Sources */,
@@ -1301,6 +1322,7 @@
 				47FB61412AD41F5300D4F5CF /* AppCoordinator.swift in Sources */,
 				470EDD762B14920700A3AE8F /* LoadLocationsUseCase.swift in Sources */,
 				47FBEE5A2AD1760C00719074 /* AppDelegate.swift in Sources */,
+				474C00B32B285FF900503A82 /* CustomPaddingLabel.swift in Sources */,
 				47826F172ADFD5800067FC6D /* UITableViewController+SpinnerLast.swift in Sources */,
 				47F169262AD55DDA00E1BD0B /* HomeFactory.swift in Sources */,
 				472398E02ADD4F8C004C4D47 /* CharactersRepository.swift in Sources */,
@@ -1333,6 +1355,7 @@
 				472398E52ADD50AA004C4D47 /* CharacterRepositoryImp.swift in Sources */,
 				4746D80C2AD90FA4002AC15F /* MenuDTO+Mapper.swift in Sources */,
 				47303E712B1A3C94005B7152 /* EpisodesFactory.swift in Sources */,
+				47FD22782B22221F006EE4C3 /* LoadEpisodesUseCase.swift in Sources */,
 				47FD226E2B21F553006EE4C3 /* EpisodeDTO.swift in Sources */,
 				4797CA3A2AFE0B6D001D80E9 /* LocationDetailViewController.swift in Sources */,
 				47D7B1512AE4F2C900C40805 /* ImageDataRepositoryImp.swift in Sources */,
@@ -1345,6 +1368,7 @@
 				47826F192AE0D60C0067FC6D /* LastPageValidationUseCase.swift in Sources */,
 				47980BBA2ADA860F001946F8 /* ItemCharacterTableViewCell.swift in Sources */,
 				47303E772B1A40F0005B7152 /* EpisodesViewController.swift in Sources */,
+				474C00B12B285F1E00503A82 /* ItemEpisodeTableViewCell.swift in Sources */,
 				470EDD732B1490F900A3AE8F /* ResultLocationDTO+Mapper.swift in Sources */,
 				47FBEE5C2AD1760C00719074 /* SceneDelegate.swift in Sources */,
 				475DF2A52AEE26AB00A1766E /* CharacterDetailCoordinator.swift in Sources */,
