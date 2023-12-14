@@ -82,6 +82,7 @@
 		47980BB52ADA7780001946F8 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB42ADA7780001946F8 /* CharactersViewController.swift */; };
 		47980BB72ADA78A1001946F8 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB62ADA78A1001946F8 /* CharactersCoordinator.swift */; };
 		47980BBA2ADA860F001946F8 /* ItemCharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BB92ADA860F001946F8 /* ItemCharacterTableViewCell.swift */; };
+		47B728E62B2B0263001AEC36 /* EpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B728E52B2B0263001AEC36 /* EpisodesViewModel.swift */; };
 		47D7B1472AE4EF3C00C40805 /* RemoteImageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B1462AE4EF3C00C40805 /* RemoteImageDataService.swift */; };
 		47D7B1492AE4EFC000C40805 /* ApiClientServiceImp+RemoteImageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B1482AE4EFC000C40805 /* ApiClientServiceImp+RemoteImageDataService.swift */; };
 		47D7B14B2AE4F0B000C40805 /* LocalDataImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7B14A2AE4F0B000C40805 /* LocalDataImageService.swift */; };
@@ -207,6 +208,7 @@
 		47980BB42ADA7780001946F8 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		47980BB62ADA78A1001946F8 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
 		47980BB92ADA860F001946F8 /* ItemCharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCharacterTableViewCell.swift; sourceTree = "<group>"; };
+		47B728E52B2B0263001AEC36 /* EpisodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewModel.swift; sourceTree = "<group>"; };
 		47D7B1462AE4EF3C00C40805 /* RemoteImageDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataService.swift; sourceTree = "<group>"; };
 		47D7B1482AE4EFC000C40805 /* ApiClientServiceImp+RemoteImageDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiClientServiceImp+RemoteImageDataService.swift"; sourceTree = "<group>"; };
 		47D7B14A2AE4F0B000C40805 /* LocalDataImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataImageService.swift; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 			isa = PBXGroup;
 			children = (
 				474C00AE2B285D0200503A82 /* ItemEpisodeViewModel.swift */,
+				47B728E52B2B0263001AEC36 /* EpisodesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1328,6 +1331,7 @@
 				472398E02ADD4F8C004C4D47 /* CharactersRepository.swift in Sources */,
 				4746D8152AD92562002AC15F /* ViewValues.swift in Sources */,
 				475DF2B02AF24B6F00A1766E /* CharacterDetailRepository.swift in Sources */,
+				47B728E62B2B0263001AEC36 /* EpisodesViewModel.swift in Sources */,
 				4797CA342AFE0618001D80E9 /* LocationFactory.swift in Sources */,
 				470EDD6E2B14900E00A3AE8F /* LocationRepositoryImp.swift in Sources */,
 				47F169242AD55D3200E1BD0B /* HomeCoordinator.swift in Sources */,

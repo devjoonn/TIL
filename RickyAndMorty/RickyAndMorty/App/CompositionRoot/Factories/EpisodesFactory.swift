@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 protocol EpisodesFactory {
     func makeModule() -> UIViewController
@@ -17,7 +18,16 @@ struct EpisodesFactoryImp: EpisodesFactory {
     
     
     func makeModule() -> UIViewController {
-        let controller = EpisodesViewController()
+        let state = PassthroughSubject<StateController, Never>()
+        
+        let episodesRepository = EpisodesRepositoryImp(remoteService: appContainer.apiClient)
+        let loadEpisodesUseCase = LoadEpisodesUseCaseImp(episodeRepository: episodesRepository,
+                                                         urlEpisodes: urlEpisodes)
+        let lastPageValidationUseCase = LastPageValidationUseCaseImp()
+        let episodesViewModel = EpisodesViewModelImp(state: state,
+                                                     loadEpisodesUseCase: loadEpisodesUseCase,
+                                                     lastPageVaildationUseCase: lastPageValidationUseCase)
+        let controller = EpisodesViewController(viewModel: episodesViewModel)
         return controller
     }
 }
