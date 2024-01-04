@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		472A5C3D2B3168910075C32E /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 472A5C3C2B3168910075C32E /* FSCalendar */; };
+		474C00B52B299DC600503A82 /* SelectedCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C00B42B299DC600503A82 /* SelectedCountryView.swift */; };
+		474C00B72B299F2900503A82 /* SelectedCountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C00B62B299F2900503A82 /* SelectedCountryCell.swift */; };
 		475429312B2334E600795A10 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 475429302B2334E600795A10 /* FlexLayout */; };
 		475429492B236F1500795A10 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 475429482B236F1500795A10 /* RxBlocking */; };
 		4754294B2B236F1500795A10 /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4754294A2B236F1500795A10 /* RxBlocking-Dynamic */; };
@@ -16,8 +19,19 @@
 		475429532B236F1500795A10 /* RxRelay-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 475429522B236F1500795A10 /* RxRelay-Dynamic */; };
 		475429552B236F1500795A10 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 475429542B236F1500795A10 /* RxSwift */; };
 		475429572B236F1500795A10 /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 475429562B236F1500795A10 /* RxSwift-Dynamic */; };
-		4754295A2B24228300795A10 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475429592B24228300795A10 /* MainController.swift */; };
-		4754295C2B24228C00795A10 /* MainReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4754295B2B24228C00795A10 /* MainReactor.swift */; };
+		4754295A2B24228300795A10 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475429592B24228300795A10 /* CountryViewController.swift */; };
+		4754295C2B24228C00795A10 /* CountryReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4754295B2B24228C00795A10 /* CountryReactor.swift */; };
+		4754295F2B24407300795A10 /* HorizontalContryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4754295E2B24407300795A10 /* HorizontalContryView.swift */; };
+		475429642B24426700795A10 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475429632B24426700795A10 /* Country.swift */; };
+		475429662B2466DB00795A10 /* PaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475429652B2466DB00795A10 /* PaddingButton.swift */; };
+		475429682B24673900795A10 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475429672B24673900795A10 /* Padding.swift */; };
+		4754296A2B2485BC00795A10 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475429692B2485BC00795A10 /* CountryTableViewCell.swift */; };
+		47B728E92B2DEA80001AEC36 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B728E82B2DEA80001AEC36 /* CalendarViewController.swift */; };
+		47B728EC2B2F11E8001AEC36 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B728EB2B2F11E8001AEC36 /* HomeViewController.swift */; };
+		47B728EE2B2F1504001AEC36 /* HomeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B728ED2B2F1504001AEC36 /* HomeReactor.swift */; };
+		47B728F12B2F16C4001AEC36 /* HomeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B728F02B2F16C4001AEC36 /* HomeCollectionHeaderView.swift */; };
+		47B728F32B2F1DB8001AEC36 /* HomeTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B728F22B2F1DB8001AEC36 /* HomeTrip.swift */; };
+		47B728F52B2F2195001AEC36 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B728F42B2F2195001AEC36 /* HomeCollectionViewCell.swift */; };
 		47BEA7F32B23203A009AD85A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BEA7F22B23203A009AD85A /* AppDelegate.swift */; };
 		47BEA7F52B23203A009AD85A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BEA7F42B23203A009AD85A /* SceneDelegate.swift */; };
 		47BEA7F72B23203A009AD85A /* CarculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BEA7F62B23203A009AD85A /* CarculatorController.swift */; };
@@ -29,8 +43,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		475429592B24228300795A10 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
-		4754295B2B24228C00795A10 /* MainReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReactor.swift; sourceTree = "<group>"; };
+		474C00B42B299DC600503A82 /* SelectedCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountryView.swift; sourceTree = "<group>"; };
+		474C00B62B299F2900503A82 /* SelectedCountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountryCell.swift; sourceTree = "<group>"; };
+		475429592B24228300795A10 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		4754295B2B24228C00795A10 /* CountryReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryReactor.swift; sourceTree = "<group>"; };
+		4754295E2B24407300795A10 /* HorizontalContryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalContryView.swift; sourceTree = "<group>"; };
+		475429632B24426700795A10 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		475429652B2466DB00795A10 /* PaddingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingButton.swift; sourceTree = "<group>"; };
+		475429672B24673900795A10 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		475429692B2485BC00795A10 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		47B728E82B2DEA80001AEC36 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		47B728EB2B2F11E8001AEC36 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		47B728ED2B2F1504001AEC36 /* HomeReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReactor.swift; sourceTree = "<group>"; };
+		47B728F02B2F16C4001AEC36 /* HomeCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionHeaderView.swift; sourceTree = "<group>"; };
+		47B728F22B2F1DB8001AEC36 /* HomeTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrip.swift; sourceTree = "<group>"; };
+		47B728F42B2F2195001AEC36 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		47BEA7EF2B23203A009AD85A /* FlexPinAndReactorkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexPinAndReactorkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BEA7F22B23203A009AD85A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47BEA7F42B23203A009AD85A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4754294D2B236F1500795A10 /* RxCocoa in Frameworks */,
+				472A5C3D2B3168910075C32E /* FSCalendar in Frameworks */,
 				475429572B236F1500795A10 /* RxSwift-Dynamic in Frameworks */,
 				4754294F2B236F1500795A10 /* RxCocoa-Dynamic in Frameworks */,
 				475429552B236F1500795A10 /* RxSwift in Frameworks */,
@@ -63,13 +91,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		475429582B24227200795A10 /* Main */ = {
+		475429582B24227200795A10 /* Country */ = {
 			isa = PBXGroup;
 			children = (
-				475429592B24228300795A10 /* MainController.swift */,
-				4754295B2B24228C00795A10 /* MainReactor.swift */,
+				4754295D2B243F8C00795A10 /* SubViews */,
+				475429592B24228300795A10 /* CountryViewController.swift */,
+				4754295B2B24228C00795A10 /* CountryReactor.swift */,
 			);
-			path = Main;
+			path = Country;
+			sourceTree = "<group>";
+		};
+		4754295D2B243F8C00795A10 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				4754295E2B24407300795A10 /* HorizontalContryView.swift */,
+				475429652B2466DB00795A10 /* PaddingButton.swift */,
+				475429672B24673900795A10 /* Padding.swift */,
+				475429692B2485BC00795A10 /* CountryTableViewCell.swift */,
+				474C00B42B299DC600503A82 /* SelectedCountryView.swift */,
+				474C00B62B299F2900503A82 /* SelectedCountryCell.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		475429602B2441D000795A10 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				475429622B24423E00795A10 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		475429612B2441D600795A10 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		475429622B24423E00795A10 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				475429632B24426700795A10 /* Country.swift */,
+				47B728F22B2F1DB8001AEC36 /* HomeTrip.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		47B728E72B2DEA57001AEC36 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				47B728E82B2DEA80001AEC36 /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		47B728EA2B2F114D001AEC36 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				47B728EF2B2F16AA001AEC36 /* SubViews */,
+				47B728EB2B2F11E8001AEC36 /* HomeViewController.swift */,
+				47B728ED2B2F1504001AEC36 /* HomeReactor.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		47B728EF2B2F16AA001AEC36 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				47B728F02B2F16C4001AEC36 /* HomeCollectionHeaderView.swift */,
+				47B728F42B2F2195001AEC36 /* HomeCollectionViewCell.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		47BEA7E62B232039009AD85A = {
@@ -91,6 +184,8 @@
 		47BEA7F12B23203A009AD85A /* FlexPinAndReactorkit */ = {
 			isa = PBXGroup;
 			children = (
+				475429612B2441D600795A10 /* Data */,
+				475429602B2441D000795A10 /* Domain */,
 				47BEA8072B2320F8009AD85A /* Presentation */,
 				47BEA8062B2320CB009AD85A /* Application */,
 				47BEA7FB2B23203C009AD85A /* Assets.xcassets */,
@@ -112,7 +207,9 @@
 		47BEA8072B2320F8009AD85A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				475429582B24227200795A10 /* Main */,
+				47B728EA2B2F114D001AEC36 /* Home */,
+				47B728E72B2DEA57001AEC36 /* Calendar */,
+				475429582B24227200795A10 /* Country */,
 				47BEA8082B232139009AD85A /* Carculator */,
 			);
 			path = Presentation;
@@ -155,6 +252,7 @@
 				475429522B236F1500795A10 /* RxRelay-Dynamic */,
 				475429542B236F1500795A10 /* RxSwift */,
 				475429562B236F1500795A10 /* RxSwift-Dynamic */,
+				472A5C3C2B3168910075C32E /* FSCalendar */,
 			);
 			productName = FlexPinAndReactorkit;
 			productReference = 47BEA7EF2B23203A009AD85A /* FlexPinAndReactorkit.app */;
@@ -189,6 +287,7 @@
 				47BEA8132B2321FA009AD85A /* XCRemoteSwiftPackageReference "ReactorKit" */,
 				4754292F2B2334E600795A10 /* XCRemoteSwiftPackageReference "FlexLayout" */,
 				475429472B236F1500795A10 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				472A5C3B2B3168910075C32E /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 47BEA7F02B23203A009AD85A /* Products */;
 			projectDirPath = "";
@@ -217,11 +316,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				47BEA7F72B23203A009AD85A /* CarculatorController.swift in Sources */,
-				4754295C2B24228C00795A10 /* MainReactor.swift in Sources */,
+				475429682B24673900795A10 /* Padding.swift in Sources */,
+				47B728F32B2F1DB8001AEC36 /* HomeTrip.swift in Sources */,
+				47B728F52B2F2195001AEC36 /* HomeCollectionViewCell.swift in Sources */,
+				4754295C2B24228C00795A10 /* CountryReactor.swift in Sources */,
+				4754296A2B2485BC00795A10 /* CountryTableViewCell.swift in Sources */,
 				47BEA8172B23220F009AD85A /* CarculatorReactor.swift in Sources */,
+				47B728EE2B2F1504001AEC36 /* HomeReactor.swift in Sources */,
+				47B728EC2B2F11E8001AEC36 /* HomeViewController.swift in Sources */,
 				47BEA7F32B23203A009AD85A /* AppDelegate.swift in Sources */,
 				47BEA7F52B23203A009AD85A /* SceneDelegate.swift in Sources */,
-				4754295A2B24228300795A10 /* MainController.swift in Sources */,
+				4754295A2B24228300795A10 /* CountryViewController.swift in Sources */,
+				474C00B52B299DC600503A82 /* SelectedCountryView.swift in Sources */,
+				474C00B72B299F2900503A82 /* SelectedCountryCell.swift in Sources */,
+				47B728F12B2F16C4001AEC36 /* HomeCollectionHeaderView.swift in Sources */,
+				475429662B2466DB00795A10 /* PaddingButton.swift in Sources */,
+				475429642B24426700795A10 /* Country.swift in Sources */,
+				47B728E92B2DEA80001AEC36 /* CalendarViewController.swift in Sources */,
+				4754295F2B24407300795A10 /* HorizontalContryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +552,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		472A5C3B2B3168910075C32E /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
 		4754292F2B2334E600795A10 /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/layoutBox/FlexLayout";
@@ -475,6 +595,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		472A5C3C2B3168910075C32E /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 472A5C3B2B3168910075C32E /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
 		475429302B2334E600795A10 /* FlexLayout */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4754292F2B2334E600795A10 /* XCRemoteSwiftPackageReference "FlexLayout" */;

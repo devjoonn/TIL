@@ -102,8 +102,9 @@ extension CarculatorController: View {
     // MARK: - Bind
     func bind(reactor: CarculatorReactor) {
         deleteButton.rx.tap
-            .bind {
-                print("del")
+            .bind { [ weak self] _ in
+                let controller = CountryViewController(reactor: CountryReactor())
+                self?.navigationController?.pushViewController(controller, animated: true)
             }.disposed(by: disposeBag)
         
         increaseButton.rx.tap
