@@ -28,13 +28,14 @@ struct ContentView: View {
 struct Forum: View {
     @State private var list: [Post] = Post.list
     @State private var showAddView: Bool = false
+    @State private var newPost = Post(username: "유저 이름", content: "")
     
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(list) { post in
+                ForEach($list) { $post in
                     NavigationLink {
-                        PostDetail(post: post)
+                        PostDetail(post: $post)
                     } label: {
                         PostRow(post: post)
                     }
@@ -54,10 +55,24 @@ struct Forum: View {
             }
             .padding()
         }
-        .sheet(isPresented: $showAddView) {
-            // postAdd 에서 게시 버튼을 눌렀을 때 action
-            PostAdd { post in
-                list.insert(post, at: 0)
+        .fullScreenCover(isPresented: $showAddView) {
+            NavigationView {
+                PostAdd(editingPost: $newPost)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button("취소") {
+                                newPost = Post(username: "유저 이름", content: "")
+                                showAddView = false
+                            }
+                        }
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("게시") {
+                                list.insert(newPost, at: 0)
+                                showAddView = false
+                                newPost = Post(username: "유저 이름", content: "")
+                            }
+                        }
+                    }
             }
         }
     }
@@ -65,42 +80,27 @@ struct Forum: View {
 
 struct PostAdd: View {
     @FocusState private var isFocused: Bool
-    @Environment(\.dismiss) private var dismiss
-    @State private var text: String = ""
-    
-    let postAction: (_ post: Post) -> ()
+    @Binding var editingPost: Post
     
     var body: some View {
-        NavigationView {
-            VStack {
-                TextField("포스트를 입력해주세요..", text: $text)
-                    .font(.title)
-                    .padding()
-                    .padding(.top)
-                    .focused($isFocused)
-                    .onAppear { isFocused = true }
-                Spacer()
-            }
-            .navigationTitle("포스트 게시")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("취소") { dismiss() }
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("게시") {
-                        let newPost = Post(username: "유저이름", content: text)
-                        postAction(newPost)
-                        dismiss()
-                    }
-                }
-            }
+        VStack {
+            TextField("포스트를 입력해주세요..", text: $editingPost.content)
+                .font(.title)
+                .padding()
+                .padding(.top)
+                .focused($isFocused)
+                .onAppear { isFocused = true }
+            Spacer()
         }
+        .navigationTitle("포스트 게시")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct PostDetail: View {
-    let post: Post
+    @State private var showEditView: Bool = false
+    @Binding var post: Post
+    @State private var editingPost = Post(username: "유저 이름", content: "")
     
     var body: some View {
         VStack(spacing: 20) {
@@ -110,13 +110,30 @@ struct PostDetail: View {
                 .font(.body)
             
             Button {
-                
+                editingPost = post
+                showEditView.toggle()
             } label: {
                 HStack {
                     Image(systemName: "pencil")
                     Text("수정")
                 }
                 .tint(.indigo)
+            }
+            .sheet(isPresented: $showEditView) {
+                NavigationView {
+                    PostAdd(editingPost: $editingPost)
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button("취소") { showEditView = false }
+                            }
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button("게시") {
+                                    post = editingPost
+                                    showEditView = false
+                                }
+                            }
+                        }
+                }
             }
         }
     }
@@ -152,7 +169,7 @@ struct PostRow: View {
 struct Post: Identifiable {
     let id = UUID()
     let username: String
-    let content: String
+    var content: String
 }
 
 extension Post {
@@ -168,10 +185,4 @@ extension Post {
 
 #Preview {
     ContentView()
-//    PostRow(post: Post(username: "사용자A", content: "사용자 A의 content입니다."))
-//    PostDetail(post: Post(username: "사용자A", content: "사용자 A의 content입니다."))
-//    PostAdd()
-//    NavigationView {
-//        Forum()
-//    }
 }
